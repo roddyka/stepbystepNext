@@ -31,7 +31,7 @@ export function Countdown(){
             <button 
                 disabled
                 className={styles.countdownButton}>
-                Ciclo encerrado
+                Tasks Closed
             </button>
         ) : (
             <>
@@ -40,14 +40,14 @@ export function Countdown(){
                         onClick={resetCountdown}
                         type="button" 
                         className={`${styles.countdownButton} ${styles.countdownButtonActive}`}>
-                        Abandonar ciclo
+                        Abandon
                     </button>
                     ) : (
                         <button 
                             onClick={startCountdown}
                             type="button" 
                             className={styles.countdownButton}>
-                            Iniciar um ciclo
+                            Start
                     </button>
                     )}
             </>
