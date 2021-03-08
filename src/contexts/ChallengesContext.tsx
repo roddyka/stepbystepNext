@@ -67,7 +67,7 @@ export function ChallengesProvider({children, ...rest}: ChallengesProviderProps)
 
         new Audio('/notification.mp3').play();
 
-        if(Notification.permission === 'granted'){
+        if(Notification.permission == 'granted'){
             new Notification('Novo Desafio',{
                 body: `Valendo ${challenge.amount}xp!`
             })
