@@ -88,677 +88,248 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/index.tsx");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./challenges.json":
+/*!*************************!*\
+  !*** ./challenges.json ***!
+  \*************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, default */
+/***/ (function(module) {
 
-module.exports = __webpack_require__("QeBL");
-
-
-/***/ }),
-
-/***/ "4vit":
-/***/ (function(module, exports) {
-
-// Exports
-module.exports = {
-	"challengeBoxContainer": "ChallengeBox_challengeBoxContainer__53AkF",
-	"challengeNotActive": "ChallengeBox_challengeNotActive__35ixK",
-	"challengeActive": "ChallengeBox_challengeActive__3mO_D",
-	"challengeFailedButton": "ChallengeBox_challengeFailedButton__u8aFS",
-	"challengeSucceededButton": "ChallengeBox_challengeSucceededButton__18bu2",
-	"challengeImageMovement": "ChallengeBox_challengeImageMovement__3Y3lf",
-	"image": "ChallengeBox_image__2hT1K"
-};
-
+eval("module.exports = JSON.parse(\"[{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Estique um de seus braços com a palma da mão virada para frente e puxe os dedos para cima por 10 segundos por mão.\\\",\\\"amount\\\":80},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Estique seu braço contra o peito e puxe-o utilizando o outro braço por 10 segundos por braço.\\\",\\\"amount\\\":60},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Puxe seu pescoço com a ajuda da mão para a direita e para a esquerda, permanecendo na posição por alguns segundos.\\\",\\\"amount\\\":70},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Com as duas mãos na parte de trás da cabeça, leve-a para baixo, alongando a parte de trás da região.\\\",\\\"amount\\\":60},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Cruze as pernas e desça com as mãos esticadas em direção ao chão. Repita o movimento com a outra perna na frente.\\\",\\\"amount\\\":100},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Sentado, abra as pernas e tente encostar as palmas das mãos no chão, repita 3 vezes por 5 segundos.\\\",\\\"amount\\\":80},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Puxe o joelho de encontro ao peito e segure, troque de perna após 10 segundos.\\\",\\\"amount\\\":50},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Sentado, cruze uma perna e incline seu tronco à frente, troque de perna após 10 segundos.\\\",\\\"amount\\\":80},{\\\"type\\\":\\\"eye\\\",\\\"description\\\":\\\"Sentado, feche os olhos e cubra-os com as palmas da mão durante 2 minutos, depois abra normalmente.\\\",\\\"amount\\\":90},{\\\"type\\\":\\\"eye\\\",\\\"description\\\":\\\"Em algum ambiente aberto, olhe o mais longe que puder em quatro direções por 3s, mexa apenas os olhos. Repita 3 vezes.\\\",\\\"amount\\\":140},{\\\"type\\\":\\\"eye\\\",\\\"description\\\":\\\"Usando os polegares, massage a área abaixo das sobrancelhas em movimentos circulares por 15 segundos.\\\",\\\"amount\\\":70},{\\\"type\\\":\\\"body\\\",\\\"description\\\":\\\"Em pé, gire a cintura o máximo que puder para a esquerda, segure por cinco segundos. Repita para a direita.\\\",\\\"amount\\\":90}]\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL2NoYWxsZW5nZXMuanNvbi5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./challenges.json\n");
 
 /***/ }),
 
-/***/ "F5FC":
-/***/ (function(module, exports) {
-
-module.exports = require("react/jsx-runtime");
-
-/***/ }),
-
-/***/ "QeBL":
+/***/ "./src/components/ChallengeBox.tsx":
+/*!*****************************************!*\
+  !*** ./src/components/ChallengeBox.tsx ***!
+  \*****************************************/
+/*! exports provided: ChallengeBox */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ Home; });
-__webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return /* binding */ getServerSideProps; });
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__("F5FC");
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-
-// EXTERNAL MODULE: ./challenges.json
-var challenges = __webpack_require__("c5aZ");
-
-// EXTERNAL MODULE: external "js-cookie"
-var external_js_cookie_ = __webpack_require__("vmXh");
-var external_js_cookie_default = /*#__PURE__*/__webpack_require__.n(external_js_cookie_);
-
-// EXTERNAL MODULE: ./src/styles/components/LevelUpModal.module.css
-var LevelUpModal_module = __webpack_require__("lFCE");
-var LevelUpModal_module_default = /*#__PURE__*/__webpack_require__.n(LevelUpModal_module);
-
-// CONCATENATED MODULE: ./src/components/LevelUpModal.tsx
-
-
-
-
-
-function LevelUpModal() {
-  const {
-    level,
-    closeLevelUpModal
-  } = Object(external_react_["useContext"])(ChallengesContext);
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-    className: LevelUpModal_module_default.a.overlay,
-    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: LevelUpModal_module_default.a.container,
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("header", {
-        children: level
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("strong", {
-        children: "Level Up!"
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("p", {
-        children: ["You are awesome! ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), "keep up the great work!"]
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-        onClick: closeLevelUpModal,
-        type: "button",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-          src: "/icons/close.svg",
-          alt: "fechar modal"
-        })
-      })]
-    })
-  });
-}
-// CONCATENATED MODULE: ./src/contexts/ChallengesContext.tsx
-
-
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-
-const ChallengesContext = /*#__PURE__*/Object(external_react_["createContext"])({});
-function ChallengesProvider(_ref) {
-  var _rest$level, _rest$currentExperien, _rest$challengesCompl;
-
-  let {
-    children
-  } = _ref,
-      rest = _objectWithoutProperties(_ref, ["children"]);
-
-  const {
-    0: level,
-    1: setLevel
-  } = Object(external_react_["useState"])((_rest$level = rest.level) !== null && _rest$level !== void 0 ? _rest$level : 1);
-  const {
-    0: currentExperience,
-    1: setCurrentExperience
-  } = Object(external_react_["useState"])((_rest$currentExperien = rest.currentExperience) !== null && _rest$currentExperien !== void 0 ? _rest$currentExperien : 0);
-  const {
-    0: challengesCompleted,
-    1: setChallengesCompleted
-  } = Object(external_react_["useState"])((_rest$challengesCompl = rest.challengesCompleted) !== null && _rest$challengesCompl !== void 0 ? _rest$challengesCompl : 0);
-  const {
-    0: activeChallenge,
-    1: setActiveChallenge
-  } = Object(external_react_["useState"])(null);
-  const {
-    0: isModalOpen,
-    1: setIsModalOpen
-  } = Object(external_react_["useState"])(false);
-  const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
-  Object(external_react_["useEffect"])(() => {
-    Notification.requestPermission();
-  }, []);
-  Object(external_react_["useEffect"])(() => {
-    external_js_cookie_default.a.set('level', String(level));
-    external_js_cookie_default.a.set('currentExperience', String(currentExperience));
-    external_js_cookie_default.a.set('challengesCompleted', String(challengesCompleted));
-  }, [levelUp, currentExperience, challengesCompleted]);
-
-  function levelUp() {
-    setLevel(level + 1);
-    setIsModalOpen(true);
-  }
-
-  function closeLevelUpModal() {
-    setIsModalOpen(false);
-  }
-
-  function startNewChallenge() {
-    const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
-    const challenge = challenges[randomChallengeIndex];
-    setActiveChallenge(challenge);
-    new Audio('/notification.mp3').play();
-
-    if (Notification.permission === 'granted') {
-      new Notification('Novo Desafio', {
-        body: `Valendo ${challenge.amount}xp!`
-      });
-    }
-  }
-
-  function resetChallenge() {
-    setActiveChallenge(null);
-  }
-
-  function completeChallenge() {
-    if (!activeChallenge) {
-      return;
-    }
-
-    const {
-      amount
-    } = activeChallenge;
-    let finalExperience = currentExperience + amount;
-
-    if (finalExperience >= experienceToNextLevel) {
-      finalExperience = finalExperience - experienceToNextLevel;
-      levelUp();
-    }
-
-    setCurrentExperience(finalExperience);
-    setActiveChallenge(null);
-    setChallengesCompleted(challengesCompleted + 1);
-  }
-
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])(ChallengesContext.Provider, {
-    value: {
-      level,
-      currentExperience,
-      challengesCompleted,
-      levelUp,
-      startNewChallenge,
-      resetChallenge,
-      activeChallenge,
-      experienceToNextLevel,
-      completeChallenge,
-      closeLevelUpModal
-    },
-    children: [children, isModalOpen && /*#__PURE__*/Object(jsx_runtime_["jsx"])(LevelUpModal, {})]
-  });
-}
-// EXTERNAL MODULE: ./src/styles/components/ExperienceBar.module.css
-var ExperienceBar_module = __webpack_require__("guWg");
-var ExperienceBar_module_default = /*#__PURE__*/__webpack_require__.n(ExperienceBar_module);
-
-// CONCATENATED MODULE: ./src/components/ExperienceBar.tsx
-
-
-
-
-
-function ExperienceBar() {
-  const {
-    currentExperience,
-    experienceToNextLevel
-  } = Object(external_react_["useContext"])(ChallengesContext);
-  const percentToNextLevel = Math.round(currentExperience * 100) / experienceToNextLevel;
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("header", {
-    className: ExperienceBar_module_default.a.experienceBar,
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-      children: "0 xp"
-    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        style: {
-          width: `${percentToNextLevel}%`
-        },
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-          className: ExperienceBar_module_default.a.currentExperience,
-          src: "/icons/dotGreen.png",
-          style: {
-            left: `${percentToNextLevel}%`
-          },
-          alt: ""
-        })
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("span", {
-        className: ExperienceBar_module_default.a.currentExperience,
-        style: {
-          left: `${percentToNextLevel}%`
-        },
-        children: [currentExperience, " xp"]
-      })]
-    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("span", {
-      children: [experienceToNextLevel, " xp"]
-    })]
-  });
-}
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__("xnum");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-
-// EXTERNAL MODULE: ./src/styles/components/Profile.module.css
-var Profile_module = __webpack_require__("uixA");
-var Profile_module_default = /*#__PURE__*/__webpack_require__.n(Profile_module);
-
-// CONCATENATED MODULE: ./src/components/Profile.tsx
-
-
-
-
-
-function Profile() {
-  const {
-    level
-  } = Object(external_react_["useContext"])(ChallengesContext);
-
-  function responseGoogle(data) {
-    console.log(data);
-  }
-
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    className: Profile_module_default.a.profileContainer,
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-      src: "https://github.com/roddyka.png",
-      alt: "Rodrigo Antunes"
-    }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("strong", {
-        children: "Rodrigo Antunes"
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("p", {
-        children: [" ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-          src: "icons/level.svg",
-          alt: ""
-        }), " Level ", level]
-      })]
-    })]
-  });
-}
-// EXTERNAL MODULE: ./src/styles/Pages/Home.module.css
-var Home_module = __webpack_require__("cLnE");
-var Home_module_default = /*#__PURE__*/__webpack_require__.n(Home_module);
-
-// EXTERNAL MODULE: ./src/styles/components/CompletedChallenger.module.css
-var CompletedChallenger_module = __webpack_require__("ST9b");
-var CompletedChallenger_module_default = /*#__PURE__*/__webpack_require__.n(CompletedChallenger_module);
-
-// CONCATENATED MODULE: ./src/components/CompletedChallenges.tsx
-
-
-
-
-
-function CompletedChallenger() {
-  const {
-    challengesCompleted
-  } = Object(external_react_["useContext"])(ChallengesContext);
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    className: CompletedChallenger_module_default.a.completedChallengesCointainer,
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-      children: "Challenges Completed"
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-      children: challengesCompleted
-    })]
-  });
-}
-// CONCATENATED MODULE: ./src/contexts/CountdownContext.tsx
-
-
-
-const CountdownContext = /*#__PURE__*/Object(external_react_["createContext"])({});
-let countdownTimeout;
-function CountdownProvider({
-  children
-}) {
-  const {
-    startNewChallenge
-  } = Object(external_react_["useContext"])(ChallengesContext);
-  const {
-    0: time,
-    1: setTime
-  } = Object(external_react_["useState"])(0.1 * 60);
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
-  const {
-    0: isActive,
-    1: setIsActive
-  } = Object(external_react_["useState"])(false);
-  const {
-    0: hasFinished,
-    1: setHasFinished
-  } = Object(external_react_["useState"])(false);
-
-  function startCountdown() {
-    setIsActive(true);
-  }
-
-  function resetCountdown() {
-    clearTimeout(countdownTimeout);
-    setHasFinished(false);
-    setIsActive(false);
-    setTime(0.1 * 60);
-  }
-
-  Object(external_react_["useEffect"])(() => {
-    if (isActive && time > 0) {
-      countdownTimeout = setTimeout(() => {
-        setTime(time - 1);
-      }, 1000);
-    } else if (isActive && time === 0) {
-      setHasFinished(true);
-      setIsActive(false);
-      startNewChallenge();
-    }
-  }, [isActive, time]);
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(CountdownContext.Provider, {
-    value: {
-      minutes,
-      seconds,
-      hasFinished,
-      isActive,
-      startCountdown,
-      resetCountdown
-    },
-    children: children
-  });
-}
-// EXTERNAL MODULE: ./src/styles/components/Countdown.module.css
-var Countdown_module = __webpack_require__("p2AZ");
-var Countdown_module_default = /*#__PURE__*/__webpack_require__.n(Countdown_module);
-
-// CONCATENATED MODULE: ./src/components/Countdown.tsx
-
-
-
-
-
-
-function Countdown() {
-  const {
-    minutes,
-    seconds,
-    hasFinished,
-    isActive,
-    startCountdown,
-    resetCountdown
-  } = Object(external_react_["useContext"])(CountdownContext);
-  const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
-  const [secondLeft, secoundRight] = String(seconds).padStart(2, '0').split('');
-  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: Countdown_module_default.a.countdownCountainer,
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-          children: minuteLeft
-        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-          children: minuteRight
-        })]
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-        children: ":"
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-          children: secondLeft
-        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
-          children: secoundRight
-        })]
-      })]
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-      className: Countdown_module_default.a.countdownContainerButton,
-      children: hasFinished ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-        disabled: true,
-        className: Countdown_module_default.a.countdownButton,
-        children: "Tasks Closed"
-      }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])(jsx_runtime_["Fragment"], {
-        children: isActive ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-          onClick: resetCountdown,
-          type: "button",
-          className: `${Countdown_module_default.a.countdownButton} ${Countdown_module_default.a.countdownButtonActive}`,
-          children: "Abandon"
-        }) : /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-          onClick: startCountdown,
-          type: "button",
-          className: Countdown_module_default.a.countdownButton,
-          children: "Start"
-        })
-      })
-    })]
-  });
-}
-// EXTERNAL MODULE: ./src/styles/components/ChallengeBox.module.css
-var ChallengeBox_module = __webpack_require__("4vit");
-var ChallengeBox_module_default = /*#__PURE__*/__webpack_require__.n(ChallengeBox_module);
-
-// CONCATENATED MODULE: ./src/components/ChallengeBox.tsx
-
-
-
-
-
-
-function ChallengeBox() {
-  const {
-    activeChallenge,
-    resetChallenge,
-    completeChallenge
-  } = Object(external_react_["useContext"])(ChallengesContext);
-  const {
-    resetCountdown
-  } = Object(external_react_["useContext"])(CountdownContext);
-
-  function handleChallengeSucceeded() {
-    completeChallenge();
-    resetCountdown();
-  }
-
-  function handleChallengeFailed() {
-    resetChallenge();
-    resetCountdown();
-  }
-
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-    className: ChallengeBox_module_default.a.challengeBoxContainer,
-    children: activeChallenge ? /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: ChallengeBox_module_default.a.challengeActive,
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("header", {
-        children: ["Win ", activeChallenge.amount, " xp"]
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("main", {
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-          className: ChallengeBox_module_default.a.challengeImageMovement,
-          src: `icons/${activeChallenge.type}.svg`,
-          alt: ""
-        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("strong", {
-          children: "New Challenge"
-        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
-          children: activeChallenge.description
-        })]
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("footer", {
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-          type: "button",
-          onClick: handleChallengeFailed,
-          className: ChallengeBox_module_default.a.challengeFailedButton,
-          children: "Failed"
-        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("button", {
-          type: "button",
-          className: ChallengeBox_module_default.a.challengeSucceededButton,
-          onClick: handleChallengeSucceeded,
-          children: "Completed"
-        })]
-      })]
-    }) : /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: ChallengeBox_module_default.a.challengeNotActive,
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("strong", {
-        children: "End a task to receive a challenge"
-      }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("p", {
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
-          className: ChallengeBox_module_default.a.challengeImageMovement,
-          src: "icons/level-up.svg",
-          alt: "level up"
-        }), "Level up by completing tasks"]
-      })]
-    })
-  });
-}
-// CONCATENATED MODULE: ./src/pages/index.tsx
-
-
-
-
-
-
-
-
-
-
-
-function Home(props) {
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(ChallengesProvider, {
-    level: props.level,
-    currentExperience: props.currentExperience,
-    challengesCompleted: props.challengesCompleted,
-    children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: Home_module_default.a.container,
-      children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(head_default.a, {
-        children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("title", {
-          children: "Inicio | StepByStep"
-        })
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(ExperienceBar, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(CountdownProvider, {
-        children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("section", {
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-            children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(Profile, {}), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-              className: Home_module_default.a.syfyContainer,
-              children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(CompletedChallenger, {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Countdown, {})]
-            })]
-          }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(ChallengeBox, {})
-          })]
-        })
-      })]
-    })
-  });
-}
-const getServerSideProps = async ctx => {
-  const {
-    level,
-    currentExperience,
-    challengesCompleted
-  } = ctx.req.cookies;
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
-    }
-  };
-};
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ChallengeBox\", function() { return ChallengeBox; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/components/ChallengeBox.module.css */ \"./src/styles/components/ChallengeBox.module.css\");\n/* harmony import */ var _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/ChallengesContext */ \"./src/contexts/ChallengesContext.tsx\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _contexts_CountdownContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../contexts/CountdownContext */ \"./src/contexts/CountdownContext.tsx\");\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/components/ChallengeBox.tsx\";\n\n\n\n\nfunction ChallengeBox() {\n  const {\n    activeChallenge,\n    resetChallenge,\n    completeChallenge\n  } = Object(react__WEBPACK_IMPORTED_MODULE_3__[\"useContext\"])(_contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__[\"ChallengesContext\"]);\n  const {\n    resetCountdown\n  } = Object(react__WEBPACK_IMPORTED_MODULE_3__[\"useContext\"])(_contexts_CountdownContext__WEBPACK_IMPORTED_MODULE_4__[\"CountdownContext\"]);\n\n  function handleChallengeSucceeded() {\n    completeChallenge();\n    resetCountdown();\n  }\n\n  function handleChallengeFailed() {\n    resetChallenge();\n    resetCountdown();\n  }\n\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    className: _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.challengeBoxContainer,\n    children: activeChallenge ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.challengeActive,\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"header\", {\n        children: [\"Win \", activeChallenge.amount, \" xp\"]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 24,\n        columnNumber: 20\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"main\", {\n        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"img\", {\n          className: _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.challengeImageMovement,\n          src: `icons/${activeChallenge.type}.svg`,\n          alt: \"\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 26,\n          columnNumber: 24\n        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"strong\", {\n          children: \"New Challenge\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 27,\n          columnNumber: 24\n        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"p\", {\n          children: activeChallenge.description\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 28,\n          columnNumber: 24\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 25,\n        columnNumber: 20\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"footer\", {\n        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n          type: \"button\",\n          onClick: handleChallengeFailed,\n          className: _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.challengeFailedButton,\n          children: \"Failed\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 31,\n          columnNumber: 24\n        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n          type: \"button\",\n          className: _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.challengeSucceededButton,\n          onClick: handleChallengeSucceeded,\n          children: \"Completed\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 37,\n          columnNumber: 25\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 30,\n        columnNumber: 20\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 23,\n      columnNumber: 16\n    }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.challengeNotActive,\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"strong\", {\n        children: \"End a task to receive a challenge\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 48,\n        columnNumber: 21\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"p\", {\n        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"img\", {\n          className: _styles_components_ChallengeBox_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.challengeImageMovement,\n          src: \"icons/level-up.svg\",\n          alt: \"level up\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 49,\n          columnNumber: 24\n        }, this), \"Level up by completing tasks\"]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 49,\n        columnNumber: 21\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 47,\n      columnNumber: 17\n    }, this)\n  }, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 21,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9DaGFsbGVuZ2VCb3gudHN4P2Y3MTEiXSwibmFtZXMiOlsiQ2hhbGxlbmdlQm94IiwiYWN0aXZlQ2hhbGxlbmdlIiwicmVzZXRDaGFsbGVuZ2UiLCJjb21wbGV0ZUNoYWxsZW5nZSIsInVzZUNvbnRleHQiLCJDaGFsbGVuZ2VzQ29udGV4dCIsInJlc2V0Q291bnRkb3duIiwiQ291bnRkb3duQ29udGV4dCIsImhhbmRsZUNoYWxsZW5nZVN1Y2NlZWRlZCIsImhhbmRsZUNoYWxsZW5nZUZhaWxlZCIsInN0eWxlcyIsImNoYWxsZW5nZUJveENvbnRhaW5lciIsImNoYWxsZW5nZUFjdGl2ZSIsImFtb3VudCIsImNoYWxsZW5nZUltYWdlTW92ZW1lbnQiLCJ0eXBlIiwiZGVzY3JpcHRpb24iLCJjaGFsbGVuZ2VGYWlsZWRCdXR0b24iLCJjaGFsbGVuZ2VTdWNjZWVkZWRCdXR0b24iLCJjaGFsbGVuZ2VOb3RBY3RpdmUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRU8sU0FBU0EsWUFBVCxHQUF1QjtBQUUxQixRQUFNO0FBQUNDLG1CQUFEO0FBQWtCQyxrQkFBbEI7QUFBa0NDO0FBQWxDLE1BQXVEQyx3REFBVSxDQUFDQyw2RUFBRCxDQUF2RTtBQUNBLFFBQU07QUFBQ0M7QUFBRCxNQUFtQkYsd0RBQVUsQ0FBQ0csMkVBQUQsQ0FBbkM7O0FBQ0EsV0FBU0Msd0JBQVQsR0FBbUM7QUFDL0JMLHFCQUFpQjtBQUNqQkcsa0JBQWM7QUFDakI7O0FBRUQsV0FBU0cscUJBQVQsR0FBaUM7QUFDN0JQLGtCQUFjO0FBQ2RJLGtCQUFjO0FBQ2pCOztBQUVELHNCQUNJO0FBQUssYUFBUyxFQUFFSSxpRkFBTSxDQUFDQyxxQkFBdkI7QUFBQSxjQUNLVixlQUFlLGdCQUNiO0FBQUssZUFBUyxFQUFFUyxpRkFBTSxDQUFDRSxlQUF2QjtBQUFBLDhCQUNJO0FBQUEsMkJBQWFYLGVBQWUsQ0FBQ1ksTUFBN0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBREosZUFFSTtBQUFBLGdDQUNJO0FBQUssbUJBQVMsRUFBRUgsaUZBQU0sQ0FBQ0ksc0JBQXZCO0FBQStDLGFBQUcsRUFBRyxTQUFRYixlQUFlLENBQUNjLElBQUssTUFBbEY7QUFBeUYsYUFBRyxFQUFDO0FBQTdGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZ0JBREosZUFFSTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxnQkFGSixlQUdJO0FBQUEsb0JBQUlkLGVBQWUsQ0FBQ2U7QUFBcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxnQkFISjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FGSixlQU9JO0FBQUEsZ0NBQ0k7QUFDQyxjQUFJLEVBQUMsUUFETjtBQUVDLGlCQUFPLEVBQUVQLHFCQUZWO0FBR0MsbUJBQVMsRUFBRUMsaUZBQU0sQ0FBQ08scUJBSG5CO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQURKLGVBT0s7QUFDQSxjQUFJLEVBQUMsUUFETDtBQUVBLG1CQUFTLEVBQUVQLGlGQUFNLENBQUNRLHdCQUZsQjtBQUdBLGlCQUFPLEVBQUVWLHdCQUhUO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQVBMO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQVBKO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQURhLGdCQXlCWjtBQUFLLGVBQVMsRUFBRUUsaUZBQU0sQ0FBQ1Msa0JBQXZCO0FBQUEsOEJBQ0k7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FESixlQUVJO0FBQUEsZ0NBQUc7QUFBSyxtQkFBUyxFQUFFVCxpRkFBTSxDQUFDSSxzQkFBdkI7QUFBK0MsYUFBRyxFQUFDLG9CQUFuRDtBQUF3RSxhQUFHLEVBQUM7QUFBNUU7QUFBQTtBQUFBO0FBQUE7QUFBQSxnQkFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FGSjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUExQlI7QUFBQTtBQUFBO0FBQUE7QUFBQSxVQURKO0FBbUNIIiwiZmlsZSI6Ii4vc3JjL2NvbXBvbmVudHMvQ2hhbGxlbmdlQm94LnRzeC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBzdHlsZXMgZnJvbSAnLi4vc3R5bGVzL2NvbXBvbmVudHMvQ2hhbGxlbmdlQm94Lm1vZHVsZS5jc3MnO1xuaW1wb3J0IHsgQ2hhbGxlbmdlc0NvbnRleHQgfSBmcm9tICcuLi9jb250ZXh0cy9DaGFsbGVuZ2VzQ29udGV4dCc7XG5pbXBvcnQgeyB1c2VDb250ZXh0IH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQ291bnRkb3duQ29udGV4dCB9IGZyb20gJy4uL2NvbnRleHRzL0NvdW50ZG93bkNvbnRleHQnO1xuXG5leHBvcnQgZnVuY3Rpb24gQ2hhbGxlbmdlQm94KCl7XG4gICBcbiAgICBjb25zdCB7YWN0aXZlQ2hhbGxlbmdlLCByZXNldENoYWxsZW5nZSwgY29tcGxldGVDaGFsbGVuZ2V9ID0gdXNlQ29udGV4dChDaGFsbGVuZ2VzQ29udGV4dCk7XG4gICAgY29uc3Qge3Jlc2V0Q291bnRkb3dufSA9IHVzZUNvbnRleHQoQ291bnRkb3duQ29udGV4dCk7XG4gICAgZnVuY3Rpb24gaGFuZGxlQ2hhbGxlbmdlU3VjY2VlZGVkKCl7XG4gICAgICAgIGNvbXBsZXRlQ2hhbGxlbmdlKCk7XG4gICAgICAgIHJlc2V0Q291bnRkb3duKCk7XG4gICAgfVxuXG4gICAgZnVuY3Rpb24gaGFuZGxlQ2hhbGxlbmdlRmFpbGVkICgpe1xuICAgICAgICByZXNldENoYWxsZW5nZSgpO1xuICAgICAgICByZXNldENvdW50ZG93bigpO1xuICAgIH1cblxuICAgIHJldHVybiAoXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMuY2hhbGxlbmdlQm94Q29udGFpbmVyfT5cbiAgICAgICAgICAgIHthY3RpdmVDaGFsbGVuZ2UgPyAoXG4gICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLmNoYWxsZW5nZUFjdGl2ZX0+XG4gICAgICAgICAgICAgICAgICAgPGhlYWRlcj5XaW4ge2FjdGl2ZUNoYWxsZW5nZS5hbW91bnR9IHhwPC9oZWFkZXI+XG4gICAgICAgICAgICAgICAgICAgPG1haW4+XG4gICAgICAgICAgICAgICAgICAgICAgIDxpbWcgY2xhc3NOYW1lPXtzdHlsZXMuY2hhbGxlbmdlSW1hZ2VNb3ZlbWVudH0gc3JjPXtgaWNvbnMvJHthY3RpdmVDaGFsbGVuZ2UudHlwZX0uc3ZnYH0gYWx0PVwiXCIvPlxuICAgICAgICAgICAgICAgICAgICAgICA8c3Ryb25nPk5ldyBDaGFsbGVuZ2U8L3N0cm9uZz5cbiAgICAgICAgICAgICAgICAgICAgICAgPHA+e2FjdGl2ZUNoYWxsZW5nZS5kZXNjcmlwdGlvbn08L3A+XG4gICAgICAgICAgICAgICAgICAgPC9tYWluPlxuICAgICAgICAgICAgICAgICAgIDxmb290ZXI+XG4gICAgICAgICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxuICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17aGFuZGxlQ2hhbGxlbmdlRmFpbGVkfVxuICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtzdHlsZXMuY2hhbGxlbmdlRmFpbGVkQnV0dG9ufVxuICAgICAgICAgICAgICAgICAgICAgICAgPkZhaWxlZFxuICAgICAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIFxuICAgICAgICAgICAgICAgICAgICAgICAgdHlwZT1cImJ1dHRvblwiXG4gICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9e3N0eWxlcy5jaGFsbGVuZ2VTdWNjZWVkZWRCdXR0b259XG4gICAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXtoYW5kbGVDaGFsbGVuZ2VTdWNjZWVkZWR9XG4gICAgICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgQ29tcGxldGVkXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICA8L2Zvb3Rlcj5cbiAgICAgICAgICAgICAgIDwvZGl2PiAgICBcbiAgICAgICAgICAgICkgOiAoXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy5jaGFsbGVuZ2VOb3RBY3RpdmV9PlxuICAgICAgICAgICAgICAgICAgICA8c3Ryb25nPkVuZCBhIHRhc2sgdG8gcmVjZWl2ZSBhIGNoYWxsZW5nZTwvc3Ryb25nPlxuICAgICAgICAgICAgICAgICAgICA8cD48aW1nIGNsYXNzTmFtZT17c3R5bGVzLmNoYWxsZW5nZUltYWdlTW92ZW1lbnR9IHNyYz1cImljb25zL2xldmVsLXVwLnN2Z1wiIGFsdD1cImxldmVsIHVwXCIvPlxuICAgICAgICAgICAgICAgICAgICBMZXZlbCB1cCBieSBjb21wbGV0aW5nIHRhc2tzPC9wPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgKX1cbiAgICAgICAgPC9kaXY+IFxuICAgICk7XG59Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/components/ChallengeBox.tsx\n");
 
 /***/ }),
 
-/***/ "ST9b":
+/***/ "./src/components/CompletedChallenges.tsx":
+/*!************************************************!*\
+  !*** ./src/components/CompletedChallenges.tsx ***!
+  \************************************************/
+/*! exports provided: CompletedChallenger */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CompletedChallenger\", function() { return CompletedChallenger; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/ChallengesContext */ \"./src/contexts/ChallengesContext.tsx\");\n/* harmony import */ var _styles_components_CompletedChallenger_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/components/CompletedChallenger.module.css */ \"./src/styles/components/CompletedChallenger.module.css\");\n/* harmony import */ var _styles_components_CompletedChallenger_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_components_CompletedChallenger_module_css__WEBPACK_IMPORTED_MODULE_3__);\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/components/CompletedChallenges.tsx\";\n\n\n\nfunction CompletedChallenger() {\n  const {\n    challengesCompleted\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useContext\"])(_contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__[\"ChallengesContext\"]);\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    className: _styles_components_CompletedChallenger_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.completedChallengesCointainer,\n    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n      children: \"Challenges Completed\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 9,\n      columnNumber: 13\n    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n      children: challengesCompleted\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 11,\n      columnNumber: 13\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 8,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db21wbGV0ZWRDaGFsbGVuZ2VzLnRzeD80NGEzIl0sIm5hbWVzIjpbIkNvbXBsZXRlZENoYWxsZW5nZXIiLCJjaGFsbGVuZ2VzQ29tcGxldGVkIiwidXNlQ29udGV4dCIsIkNoYWxsZW5nZXNDb250ZXh0Iiwic3R5bGVzIiwiY29tcGxldGVkQ2hhbGxlbmdlc0NvaW50YWluZXIiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBRU8sU0FBU0EsbUJBQVQsR0FBOEI7QUFDakMsUUFBTTtBQUFDQztBQUFELE1BQXdCQyx3REFBVSxDQUFDQyw2RUFBRCxDQUF4QztBQUNBLHNCQUNJO0FBQUssYUFBUyxFQUFFQyx3RkFBTSxDQUFDQyw2QkFBdkI7QUFBQSw0QkFDSTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQURKLGVBR0k7QUFBQSxnQkFBT0o7QUFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBSEo7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBREo7QUFPSCIsImZpbGUiOiIuL3NyYy9jb21wb25lbnRzL0NvbXBsZXRlZENoYWxsZW5nZXMudHN4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlQ29udGV4dCB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IENoYWxsZW5nZXNDb250ZXh0IH0gZnJvbSAnLi4vY29udGV4dHMvQ2hhbGxlbmdlc0NvbnRleHQnO1xuaW1wb3J0IHN0eWxlcyBmcm9tICcuLi9zdHlsZXMvY29tcG9uZW50cy9Db21wbGV0ZWRDaGFsbGVuZ2VyLm1vZHVsZS5jc3MnO1xuXG5leHBvcnQgZnVuY3Rpb24gQ29tcGxldGVkQ2hhbGxlbmdlcigpe1xuICAgIGNvbnN0IHtjaGFsbGVuZ2VzQ29tcGxldGVkfSA9IHVzZUNvbnRleHQoQ2hhbGxlbmdlc0NvbnRleHQpXG4gICAgcmV0dXJuIChcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy5jb21wbGV0ZWRDaGFsbGVuZ2VzQ29pbnRhaW5lcn0+XG4gICAgICAgICAgICA8c3Bhbj5DaGFsbGVuZ2VzIENvbXBsZXRlZDwvc3Bhbj5cbiAgICAgICAgICAgIFxuICAgICAgICAgICAgPHNwYW4+e2NoYWxsZW5nZXNDb21wbGV0ZWR9PC9zcGFuPlxuICAgICAgICA8L2Rpdj5cbiAgICApO1xufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/components/CompletedChallenges.tsx\n");
+
+/***/ }),
+
+/***/ "./src/components/Countdown.tsx":
+/*!**************************************!*\
+  !*** ./src/components/Countdown.tsx ***!
+  \**************************************/
+/*! exports provided: Countdown */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Countdown\", function() { return Countdown; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _contexts_CountdownContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/CountdownContext */ \"./src/contexts/CountdownContext.tsx\");\n/* harmony import */ var _styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/components/Countdown.module.css */ \"./src/styles/components/Countdown.module.css\");\n/* harmony import */ var _styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/components/Countdown.tsx\";\n\n\n\nfunction Countdown() {\n  const {\n    minutes,\n    seconds,\n    hasFinished,\n    isActive,\n    startCountdown,\n    resetCountdown\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useContext\"])(_contexts_CountdownContext__WEBPACK_IMPORTED_MODULE_2__[\"CountdownContext\"]);\n  const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');\n  const [secondLeft, secoundRight] = String(seconds).padStart(2, '0').split('');\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: _styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.countdownCountainer,\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          children: minuteLeft\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 20,\n          columnNumber: 17\n        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          children: minuteRight\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 21,\n          columnNumber: 17\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 19,\n        columnNumber: 13\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n        children: \":\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 23,\n        columnNumber: 13\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          children: secondLeft\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 25,\n          columnNumber: 17\n        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n          children: secoundRight\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 26,\n          columnNumber: 17\n        }, this)]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 24,\n        columnNumber: 13\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 18,\n      columnNumber: 9\n    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: _styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.countdownContainerButton,\n      children: hasFinished ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n        disabled: true,\n        className: _styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.countdownButton,\n        children: \"Tasks Closed\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 31,\n        columnNumber: 13\n      }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"Fragment\"], {\n        children: isActive ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n          onClick: resetCountdown,\n          type: \"button\",\n          className: `${_styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.countdownButton} ${_styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.countdownButtonActive}`,\n          children: \"Abandon\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 39,\n          columnNumber: 21\n        }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n          onClick: startCountdown,\n          type: \"button\",\n          className: _styles_components_Countdown_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.countdownButton,\n          children: \"Start\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 46,\n          columnNumber: 25\n        }, this)\n      }, void 0, false)\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 29,\n      columnNumber: 9\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 17,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Db3VudGRvd24udHN4PzYzNjYiXSwibmFtZXMiOlsiQ291bnRkb3duIiwibWludXRlcyIsInNlY29uZHMiLCJoYXNGaW5pc2hlZCIsImlzQWN0aXZlIiwic3RhcnRDb3VudGRvd24iLCJyZXNldENvdW50ZG93biIsInVzZUNvbnRleHQiLCJDb3VudGRvd25Db250ZXh0IiwibWludXRlTGVmdCIsIm1pbnV0ZVJpZ2h0IiwiU3RyaW5nIiwicGFkU3RhcnQiLCJzcGxpdCIsInNlY29uZExlZnQiLCJzZWNvdW5kUmlnaHQiLCJzdHlsZXMiLCJjb3VudGRvd25Db3VudGFpbmVyIiwiY291bnRkb3duQ29udGFpbmVyQnV0dG9uIiwiY291bnRkb3duQnV0dG9uIiwiY291bnRkb3duQnV0dG9uQWN0aXZlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFJTyxTQUFTQSxTQUFULEdBQW9CO0FBRXZCLFFBQU07QUFBQ0MsV0FBRDtBQUFVQyxXQUFWO0FBQW1CQyxlQUFuQjtBQUFnQ0MsWUFBaEM7QUFBMENDLGtCQUExQztBQUEwREM7QUFBMUQsTUFBNEVDLHdEQUFVLENBQUNDLDJFQUFELENBQTVGO0FBRUEsUUFBTSxDQUFDQyxVQUFELEVBQWFDLFdBQWIsSUFBNEJDLE1BQU0sQ0FBQ1YsT0FBRCxDQUFOLENBQWdCVyxRQUFoQixDQUF5QixDQUF6QixFQUE0QixHQUE1QixFQUFpQ0MsS0FBakMsQ0FBdUMsRUFBdkMsQ0FBbEM7QUFDQSxRQUFNLENBQUNDLFVBQUQsRUFBYUMsWUFBYixJQUE2QkosTUFBTSxDQUFDVCxPQUFELENBQU4sQ0FBZ0JVLFFBQWhCLENBQXlCLENBQXpCLEVBQTRCLEdBQTVCLEVBQWlDQyxLQUFqQyxDQUF1QyxFQUF2QyxDQUFuQztBQUlBLHNCQUNJO0FBQUEsNEJBQ0E7QUFBSyxlQUFTLEVBQUVHLDhFQUFNLENBQUNDLG1CQUF2QjtBQUFBLDhCQUNJO0FBQUEsZ0NBQ0k7QUFBQSxvQkFBT1I7QUFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQURKLGVBRUk7QUFBQSxvQkFBT0M7QUFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQUZKO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQURKLGVBS0k7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FMSixlQU1JO0FBQUEsZ0NBQ0k7QUFBQSxvQkFBT0k7QUFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQURKLGVBRUk7QUFBQSxvQkFBT0M7QUFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQUZKO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQU5KO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQURBLGVBWUE7QUFBSyxlQUFTLEVBQUVDLDhFQUFNLENBQUNFLHdCQUF2QjtBQUFBLGdCQUNDZixXQUFXLGdCQUNSO0FBQ0ksZ0JBQVEsTUFEWjtBQUVJLGlCQUFTLEVBQUVhLDhFQUFNLENBQUNHLGVBRnRCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBRFEsZ0JBT1I7QUFBQSxrQkFDS2YsUUFBUSxnQkFDTDtBQUNJLGlCQUFPLEVBQUVFLGNBRGI7QUFFSSxjQUFJLEVBQUMsUUFGVDtBQUdJLG1CQUFTLEVBQUcsR0FBRVUsOEVBQU0sQ0FBQ0csZUFBZ0IsSUFBR0gsOEVBQU0sQ0FBQ0kscUJBQXNCLEVBSHpFO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQURLLGdCQVFEO0FBQ0ksaUJBQU8sRUFBRWYsY0FEYjtBQUVJLGNBQUksRUFBQyxRQUZUO0FBR0ksbUJBQVMsRUFBRVcsOEVBQU0sQ0FBQ0csZUFIdEI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFUWjtBQVJKO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFaQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsVUFESjtBQTBDSCIsImZpbGUiOiIuL3NyYy9jb21wb25lbnRzL0NvdW50ZG93bi50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0LCB1c2VFZmZlY3QsIHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQ291bnRkb3duQ29udGV4dCB9IGZyb20gJy4uL2NvbnRleHRzL0NvdW50ZG93bkNvbnRleHQnO1xuaW1wb3J0IHN0eWxlcyBmcm9tICcuLi9zdHlsZXMvY29tcG9uZW50cy9Db3VudGRvd24ubW9kdWxlLmNzcyc7XG5cblxuXG5leHBvcnQgZnVuY3Rpb24gQ291bnRkb3duKCl7XG5cbiAgICBjb25zdCB7bWludXRlcywgc2Vjb25kcywgaGFzRmluaXNoZWQsIGlzQWN0aXZlLCBzdGFydENvdW50ZG93biwgcmVzZXRDb3VudGRvd259ID0gdXNlQ29udGV4dChDb3VudGRvd25Db250ZXh0KTtcblxuICAgIGNvbnN0IFttaW51dGVMZWZ0LCBtaW51dGVSaWdodF0gPSBTdHJpbmcobWludXRlcykucGFkU3RhcnQoMiwgJzAnKS5zcGxpdCgnJyk7XG4gICAgY29uc3QgW3NlY29uZExlZnQsIHNlY291bmRSaWdodF0gPSBTdHJpbmcoc2Vjb25kcykucGFkU3RhcnQoMiwgJzAnKS5zcGxpdCgnJyk7XG5cblxuXG4gICAgcmV0dXJuIChcbiAgICAgICAgPGRpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy5jb3VudGRvd25Db3VudGFpbmVyfT5cbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPHNwYW4+e21pbnV0ZUxlZnR9PC9zcGFuPlxuICAgICAgICAgICAgICAgIDxzcGFuPnttaW51dGVSaWdodH08L3NwYW4+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxzcGFuPjo8L3NwYW4+XG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxzcGFuPntzZWNvbmRMZWZ0fTwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3Bhbj57c2Vjb3VuZFJpZ2h0fTwvc3Bhbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9e3N0eWxlcy5jb3VudGRvd25Db250YWluZXJCdXR0b259PlxuICAgICAgICB7aGFzRmluaXNoZWQgPyAoXG4gICAgICAgICAgICA8YnV0dG9uIFxuICAgICAgICAgICAgICAgIGRpc2FibGVkXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtzdHlsZXMuY291bnRkb3duQnV0dG9ufT5cbiAgICAgICAgICAgICAgICBUYXNrcyBDbG9zZWRcbiAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICApIDogKFxuICAgICAgICAgICAgPD5cbiAgICAgICAgICAgICAgICB7aXNBY3RpdmUgPyAoXG4gICAgICAgICAgICAgICAgICAgIDxidXR0b24gXG4gICAgICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXtyZXNldENvdW50ZG93bn1cbiAgICAgICAgICAgICAgICAgICAgICAgIHR5cGU9XCJidXR0b25cIiBcbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17YCR7c3R5bGVzLmNvdW50ZG93bkJ1dHRvbn0gJHtzdHlsZXMuY291bnRkb3duQnV0dG9uQWN0aXZlfWB9PlxuICAgICAgICAgICAgICAgICAgICAgICAgQWJhbmRvblxuICAgICAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgKSA6IChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17c3RhcnRDb3VudGRvd259XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZT1cImJ1dHRvblwiIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17c3R5bGVzLmNvdW50ZG93bkJ1dHRvbn0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgU3RhcnRcbiAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICl9XG4gICAgICAgICAgICA8Lz5cbiAgICAgICAgKX1cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICk7XG59Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/components/Countdown.tsx\n");
+
+/***/ }),
+
+/***/ "./src/components/ExperienceBar.tsx":
+/*!******************************************!*\
+  !*** ./src/components/ExperienceBar.tsx ***!
+  \******************************************/
+/*! exports provided: ExperienceBar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ExperienceBar\", function() { return ExperienceBar; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/ChallengesContext */ \"./src/contexts/ChallengesContext.tsx\");\n/* harmony import */ var _styles_components_ExperienceBar_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/components/ExperienceBar.module.css */ \"./src/styles/components/ExperienceBar.module.css\");\n/* harmony import */ var _styles_components_ExperienceBar_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_components_ExperienceBar_module_css__WEBPACK_IMPORTED_MODULE_3__);\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/components/ExperienceBar.tsx\";\n\n\n\nfunction ExperienceBar() {\n  const {\n    currentExperience,\n    experienceToNextLevel\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useContext\"])(_contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__[\"ChallengesContext\"]);\n  const percentToNextLevel = Math.round(currentExperience * 100) / experienceToNextLevel;\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"header\", {\n    className: _styles_components_ExperienceBar_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.experienceBar,\n    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n      children: \"0 xp\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 13,\n      columnNumber: 13\n    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n        style: {\n          width: `${percentToNextLevel}%`\n        },\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"img\", {\n          className: _styles_components_ExperienceBar_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.currentExperience,\n          src: \"/icons/dotGreen.png\",\n          style: {\n            left: `${percentToNextLevel}%`\n          },\n          alt: \"\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 16,\n          columnNumber: 21\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 15,\n        columnNumber: 17\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n        className: _styles_components_ExperienceBar_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.currentExperience,\n        style: {\n          left: `${percentToNextLevel}%`\n        },\n        children: [currentExperience, \" xp\"]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 18,\n        columnNumber: 17\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 14,\n      columnNumber: 13\n    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"span\", {\n      children: [experienceToNextLevel, \" xp\"]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 20,\n      columnNumber: 13\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 12,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9FeHBlcmllbmNlQmFyLnRzeD85NGJjIl0sIm5hbWVzIjpbIkV4cGVyaWVuY2VCYXIiLCJjdXJyZW50RXhwZXJpZW5jZSIsImV4cGVyaWVuY2VUb05leHRMZXZlbCIsInVzZUNvbnRleHQiLCJDaGFsbGVuZ2VzQ29udGV4dCIsInBlcmNlbnRUb05leHRMZXZlbCIsIk1hdGgiLCJyb3VuZCIsInN0eWxlcyIsImV4cGVyaWVuY2VCYXIiLCJ3aWR0aCIsImxlZnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBRU8sU0FBU0EsYUFBVCxHQUF3QjtBQUUzQixRQUFNO0FBQUNDLHFCQUFEO0FBQW9CQztBQUFwQixNQUE2Q0Msd0RBQVUsQ0FBQ0MsNkVBQUQsQ0FBN0Q7QUFFQSxRQUFNQyxrQkFBa0IsR0FBR0MsSUFBSSxDQUFDQyxLQUFMLENBQVdOLGlCQUFpQixHQUFHLEdBQS9CLElBQXNDQyxxQkFBakU7QUFFQSxzQkFDSTtBQUFRLGFBQVMsRUFBRU0sa0ZBQU0sQ0FBQ0MsYUFBMUI7QUFBQSw0QkFDSTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQURKLGVBRUk7QUFBQSw4QkFDSTtBQUFLLGFBQUssRUFBRTtBQUFFQyxlQUFLLEVBQUcsR0FBRUwsa0JBQW1CO0FBQS9CLFNBQVo7QUFBQSwrQkFDSTtBQUFLLG1CQUFTLEVBQUVHLGtGQUFNLENBQUNQLGlCQUF2QjtBQUEwQyxhQUFHLEVBQUMscUJBQTlDO0FBQW9FLGVBQUssRUFBRTtBQUFFVSxnQkFBSSxFQUFJLEdBQUVOLGtCQUFtQjtBQUEvQixXQUEzRTtBQUErRyxhQUFHLEVBQUM7QUFBbkg7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQURKO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FESixlQUlJO0FBQU0saUJBQVMsRUFBRUcsa0ZBQU0sQ0FBQ1AsaUJBQXhCO0FBQTJDLGFBQUssRUFBRTtBQUFFVSxjQUFJLEVBQUksR0FBRU4sa0JBQW1CO0FBQS9CLFNBQWxEO0FBQUEsbUJBQXVGSixpQkFBdkY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBSko7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBRkosZUFRSTtBQUFBLGlCQUFPQyxxQkFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFSSjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsVUFESjtBQVlIIiwiZmlsZSI6Ii4vc3JjL2NvbXBvbmVudHMvRXhwZXJpZW5jZUJhci50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0IH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQ2hhbGxlbmdlc0NvbnRleHQgfSBmcm9tICcuLi9jb250ZXh0cy9DaGFsbGVuZ2VzQ29udGV4dCc7XG5pbXBvcnQgc3R5bGVzIGZyb20gJy4uL3N0eWxlcy9jb21wb25lbnRzL0V4cGVyaWVuY2VCYXIubW9kdWxlLmNzcyc7XG5cbmV4cG9ydCBmdW5jdGlvbiBFeHBlcmllbmNlQmFyKCl7XG5cbiAgICBjb25zdCB7Y3VycmVudEV4cGVyaWVuY2UsIGV4cGVyaWVuY2VUb05leHRMZXZlbH0gPSB1c2VDb250ZXh0KENoYWxsZW5nZXNDb250ZXh0KTtcblxuICAgIGNvbnN0IHBlcmNlbnRUb05leHRMZXZlbCA9IE1hdGgucm91bmQoY3VycmVudEV4cGVyaWVuY2UgKiAxMDApIC8gZXhwZXJpZW5jZVRvTmV4dExldmVsO1xuXG4gICAgcmV0dXJuKFxuICAgICAgICA8aGVhZGVyIGNsYXNzTmFtZT17c3R5bGVzLmV4cGVyaWVuY2VCYXJ9PlxuICAgICAgICAgICAgPHNwYW4+MCB4cDwvc3Bhbj5cbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17eyB3aWR0aDogYCR7cGVyY2VudFRvTmV4dExldmVsfSVgfX0+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgY2xhc3NOYW1lPXtzdHlsZXMuY3VycmVudEV4cGVyaWVuY2V9IHNyYz1cIi9pY29ucy9kb3RHcmVlbi5wbmdcIiBzdHlsZT17eyBsZWZ0IDogYCR7cGVyY2VudFRvTmV4dExldmVsfSVgfX0gYWx0PVwiXCIvPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT17c3R5bGVzLmN1cnJlbnRFeHBlcmllbmNlfSBzdHlsZT17eyBsZWZ0IDogYCR7cGVyY2VudFRvTmV4dExldmVsfSVgfX0+e2N1cnJlbnRFeHBlcmllbmNlfSB4cDwvc3Bhbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPHNwYW4+e2V4cGVyaWVuY2VUb05leHRMZXZlbH0geHA8L3NwYW4+XG4gICAgICAgIDwvaGVhZGVyPlxuICAgICk7XG59Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/components/ExperienceBar.tsx\n");
+
+/***/ }),
+
+/***/ "./src/components/LevelUpModal.tsx":
+/*!*****************************************!*\
+  !*** ./src/components/LevelUpModal.tsx ***!
+  \*****************************************/
+/*! exports provided: LevelUpModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"LevelUpModal\", function() { return LevelUpModal; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/ChallengesContext */ \"./src/contexts/ChallengesContext.tsx\");\n/* harmony import */ var _styles_components_LevelUpModal_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/components/LevelUpModal.module.css */ \"./src/styles/components/LevelUpModal.module.css\");\n/* harmony import */ var _styles_components_LevelUpModal_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_components_LevelUpModal_module_css__WEBPACK_IMPORTED_MODULE_3__);\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/components/LevelUpModal.tsx\";\n\n\n\nfunction LevelUpModal() {\n  const {\n    level,\n    closeLevelUpModal\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useContext\"])(_contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__[\"ChallengesContext\"]);\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    className: _styles_components_LevelUpModal_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.overlay,\n    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: _styles_components_LevelUpModal_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.container,\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"header\", {\n        children: level\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 11,\n        columnNumber: 17\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"strong\", {\n        children: \"Level Up!\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 12,\n        columnNumber: 17\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"p\", {\n        children: [\"You are awesome! \", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"br\", {}, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 13,\n          columnNumber: 37\n        }, this), \"keep up the great work!\"]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 13,\n        columnNumber: 17\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"button\", {\n        onClick: closeLevelUpModal,\n        type: \"button\",\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"img\", {\n          src: \"/icons/close.svg\",\n          alt: \"fechar modal\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 14,\n          columnNumber: 67\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 14,\n        columnNumber: 17\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 10,\n      columnNumber: 13\n    }, this)\n  }, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 9,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9MZXZlbFVwTW9kYWwudHN4P2U0ODQiXSwibmFtZXMiOlsiTGV2ZWxVcE1vZGFsIiwibGV2ZWwiLCJjbG9zZUxldmVsVXBNb2RhbCIsInVzZUNvbnRleHQiLCJDaGFsbGVuZ2VzQ29udGV4dCIsInN0eWxlcyIsIm92ZXJsYXkiLCJjb250YWluZXIiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ08sU0FBU0EsWUFBVCxHQUF1QjtBQUUxQixRQUFNO0FBQUNDLFNBQUQ7QUFBUUM7QUFBUixNQUE2QkMsd0RBQVUsQ0FBQ0MsNkVBQUQsQ0FBN0M7QUFFQSxzQkFDSTtBQUFLLGFBQVMsRUFBRUMsaUZBQU0sQ0FBQ0MsT0FBdkI7QUFBQSwyQkFDSTtBQUFLLGVBQVMsRUFBRUQsaUZBQU0sQ0FBQ0UsU0FBdkI7QUFBQSw4QkFDSTtBQUFBLGtCQUFTTjtBQUFUO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FESixlQUVJO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBRkosZUFHSTtBQUFBLHFEQUFvQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGdCQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FISixlQUlJO0FBQVEsZUFBTyxFQUFFQyxpQkFBakI7QUFBb0MsWUFBSSxFQUFDLFFBQXpDO0FBQUEsK0JBQWtEO0FBQUssYUFBRyxFQUFDLGtCQUFUO0FBQTRCLGFBQUcsRUFBQztBQUFoQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQWxEO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FKSjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFESjtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBREo7QUFVSCIsImZpbGUiOiIuL3NyYy9jb21wb25lbnRzL0xldmVsVXBNb2RhbC50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0IH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQ2hhbGxlbmdlc0NvbnRleHQgfSBmcm9tICcuLi9jb250ZXh0cy9DaGFsbGVuZ2VzQ29udGV4dCc7XG5pbXBvcnQgc3R5bGVzIGZyb20gJy4uL3N0eWxlcy9jb21wb25lbnRzL0xldmVsVXBNb2RhbC5tb2R1bGUuY3NzJztcbmV4cG9ydCBmdW5jdGlvbiBMZXZlbFVwTW9kYWwoKXtcblxuICAgIGNvbnN0IHtsZXZlbCwgY2xvc2VMZXZlbFVwTW9kYWx9ID0gdXNlQ29udGV4dChDaGFsbGVuZ2VzQ29udGV4dClcblxuICAgIHJldHVybiAoXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMub3ZlcmxheX0+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLmNvbnRhaW5lcn0+XG4gICAgICAgICAgICAgICAgPGhlYWRlcj57bGV2ZWx9PC9oZWFkZXI+XG4gICAgICAgICAgICAgICAgPHN0cm9uZz5MZXZlbCBVcCE8L3N0cm9uZz5cbiAgICAgICAgICAgICAgICA8cD5Zb3UgYXJlIGF3ZXNvbWUhIDxiciAvPmtlZXAgdXAgdGhlIGdyZWF0IHdvcmshPC9wPlxuICAgICAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17Y2xvc2VMZXZlbFVwTW9kYWx9IHR5cGU9XCJidXR0b25cIj48aW1nIHNyYz1cIi9pY29ucy9jbG9zZS5zdmdcIiBhbHQ9XCJmZWNoYXIgbW9kYWxcIi8+PC9idXR0b24+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgKVxufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/components/LevelUpModal.tsx\n");
+
+/***/ }),
+
+/***/ "./src/components/Profile.tsx":
+/*!************************************!*\
+  !*** ./src/components/Profile.tsx ***!
+  \************************************/
+/*! exports provided: Profile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Profile\", function() { return Profile; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/ChallengesContext */ \"./src/contexts/ChallengesContext.tsx\");\n/* harmony import */ var _styles_components_Profile_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/components/Profile.module.css */ \"./src/styles/components/Profile.module.css\");\n/* harmony import */ var _styles_components_Profile_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_components_Profile_module_css__WEBPACK_IMPORTED_MODULE_3__);\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/components/Profile.tsx\";\n\n\n\nfunction Profile() {\n  const {\n    level\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useContext\"])(_contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__[\"ChallengesContext\"]);\n  const {\n    0: logged,\n    1: setLogged\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])(false);\n\n  function responseGoogle(data) {\n    console.log(data);\n  }\n\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    className: _styles_components_Profile_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.profileContainer,\n    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"img\", {\n      src: \"https://github.com/roddyka.png\",\n      alt: \"Rodrigo Antunes\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 14,\n      columnNumber: 13\n    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"strong\", {\n        children: \"Rodrigo Antunes\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 16,\n        columnNumber: 20\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"p\", {\n        children: [\" \", /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"img\", {\n          src: \"icons/level.svg\",\n          alt: \"\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 18,\n          columnNumber: 24\n        }, this), \" Level \", level]\n      }, void 0, true, {\n        fileName: _jsxFileName,\n        lineNumber: 18,\n        columnNumber: 20\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 15,\n      columnNumber: 16\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 13,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9Qcm9maWxlLnRzeD9mY2E2Il0sIm5hbWVzIjpbIlByb2ZpbGUiLCJsZXZlbCIsInVzZUNvbnRleHQiLCJDaGFsbGVuZ2VzQ29udGV4dCIsImxvZ2dlZCIsInNldExvZ2dlZCIsInVzZVN0YXRlIiwicmVzcG9uc2VHb29nbGUiLCJkYXRhIiwiY29uc29sZSIsImxvZyIsInN0eWxlcyIsInByb2ZpbGVDb250YWluZXIiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBRU8sU0FBU0EsT0FBVCxHQUFrQjtBQUNyQixRQUFNO0FBQUNDO0FBQUQsTUFBVUMsd0RBQVUsQ0FBQ0MsNkVBQUQsQ0FBMUI7QUFDQSxRQUFNO0FBQUEsT0FBQ0MsTUFBRDtBQUFBLE9BQVNDO0FBQVQsTUFBc0JDLHNEQUFRLENBQUMsS0FBRCxDQUFwQzs7QUFFQSxXQUFTQyxjQUFULENBQXdCQyxJQUF4QixFQUE2QjtBQUN6QkMsV0FBTyxDQUFDQyxHQUFSLENBQVlGLElBQVo7QUFDSDs7QUFDRCxzQkFDSTtBQUFLLGFBQVMsRUFBRUcsNEVBQU0sQ0FBQ0MsZ0JBQXZCO0FBQUEsNEJBQ0k7QUFBSyxTQUFHLEVBQUMsZ0NBQVQ7QUFBMEMsU0FBRyxFQUFDO0FBQTlDO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFESixlQUVPO0FBQUEsOEJBQ0k7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FESixlQUdJO0FBQUEscUNBQUk7QUFBSyxhQUFHLEVBQUMsaUJBQVQ7QUFBMkIsYUFBRyxFQUFDO0FBQS9CO0FBQUE7QUFBQTtBQUFBO0FBQUEsZ0JBQUosYUFBK0NYLEtBQS9DO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQUhKO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQUZQO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxVQURKO0FBK0JIIiwiZmlsZSI6Ii4vc3JjL2NvbXBvbmVudHMvUHJvZmlsZS50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0LCB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IENoYWxsZW5nZXNDb250ZXh0IH0gZnJvbSAnLi4vY29udGV4dHMvQ2hhbGxlbmdlc0NvbnRleHQnO1xuaW1wb3J0IHN0eWxlcyBmcm9tICcuLi9zdHlsZXMvY29tcG9uZW50cy9Qcm9maWxlLm1vZHVsZS5jc3MnO1xuaW1wb3J0IEdvb2dsZUxvZ2luIGZyb20gJ3JlYWN0LWdvb2dsZS1sb2dpbic7XG5leHBvcnQgZnVuY3Rpb24gUHJvZmlsZSgpe1xuICAgIGNvbnN0IHtsZXZlbH0gPSB1c2VDb250ZXh0KENoYWxsZW5nZXNDb250ZXh0KTtcbiAgICBjb25zdCBbbG9nZ2VkLCBzZXRMb2dnZWRdID0gdXNlU3RhdGUoZmFsc2UpO1xuXG4gICAgZnVuY3Rpb24gcmVzcG9uc2VHb29nbGUoZGF0YSl7XG4gICAgICAgIGNvbnNvbGUubG9nKGRhdGEpO1xuICAgIH1cbiAgICByZXR1cm4oXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMucHJvZmlsZUNvbnRhaW5lcn0+XG4gICAgICAgICAgICA8aW1nIHNyYz1cImh0dHBzOi8vZ2l0aHViLmNvbS9yb2RkeWthLnBuZ1wiIGFsdD1cIlJvZHJpZ28gQW50dW5lc1wiLz5cbiAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgPHN0cm9uZz5Sb2RyaWdvIEFudHVuZXM8L3N0cm9uZz5cbiAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgIDxwPiA8aW1nIHNyYz1cImljb25zL2xldmVsLnN2Z1wiIGFsdD1cIlwiLz4gTGV2ZWwge2xldmVsfTwvcD5cbiAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgey8qIHtsb2dnZWQgPyAoXG4gICAgICAgICAgICAgICA8PlxuICAgICAgICAgICAgICAgPGltZyBzcmM9XCJodHRwczovL2dpdGh1Yi5jb20vcm9kZHlrYS5wbmdcIiBhbHQ9XCJSb2RyaWdvIEFudHVuZXNcIi8+XG4gICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgIDxzdHJvbmc+Um9kcmlnbyBBbnR1bmVzPC9zdHJvbmc+XG4gICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICA8cD4gPGltZyBzcmM9XCJpY29ucy9sZXZlbC5zdmdcIiBhbHQ9XCJcIi8+IExldmVsIHtsZXZlbH08L3A+XG4gICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgPC8+XG4gICAgICAgICAgICApIDogKFxuICAgICAgICAgICAgICAgIDxHb29nbGVMb2dpblxuICAgICAgICAgICAgICAgIGNsaWVudElkPVwiMzIwMDUwNzU4MDgtMHE2ZTRnNzU4ZzVmMmo5YjdrNmU1ZGtwc25yZmhyYm8uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb21cIlxuICAgICAgICAgICAgICAgIGJ1dHRvblRleHQ9XCJMb2dpblwiXG4gICAgICAgICAgICAgICAgb25TdWNjZXNzPXtyZXNwb25zZUdvb2dsZX1cbiAgICAgICAgICAgICAgICBvbkZhaWx1cmU9e3Jlc3BvbnNlR29vZ2xlfVxuICAgICAgICAgICAgICAgIGNvb2tpZVBvbGljeT17J3NpbmdsZV9ob3N0X29yaWdpbid9XG4gICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICl9ICAqL31cblxuICAgICAgICAgICAgXG4gICAgICAgIDwvZGl2PlxuICAgIClcbn0iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/components/Profile.tsx\n");
+
+/***/ }),
+
+/***/ "./src/contexts/ChallengesContext.tsx":
+/*!********************************************!*\
+  !*** ./src/contexts/ChallengesContext.tsx ***!
+  \********************************************/
+/*! exports provided: ChallengesContext, ChallengesProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ChallengesContext\", function() { return ChallengesContext; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ChallengesProvider\", function() { return ChallengesProvider; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _challenges_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../challenges.json */ \"./challenges.json\");\nvar _challenges_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../challenges.json */ \"./challenges.json\", 1);\n/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! js-cookie */ \"js-cookie\");\n/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _components_LevelUpModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LevelUpModal */ \"./src/components/LevelUpModal.tsx\");\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/contexts/ChallengesContext.tsx\";\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n\n\n\n\nconst ChallengesContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__[\"createContext\"])({});\nfunction ChallengesProvider(_ref) {\n  var _rest$level, _rest$currentExperien, _rest$challengesCompl;\n\n  let {\n    children\n  } = _ref,\n      rest = _objectWithoutProperties(_ref, [\"children\"]);\n\n  const {\n    0: level,\n    1: setLevel\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])((_rest$level = rest.level) !== null && _rest$level !== void 0 ? _rest$level : 1);\n  const {\n    0: currentExperience,\n    1: setCurrentExperience\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])((_rest$currentExperien = rest.currentExperience) !== null && _rest$currentExperien !== void 0 ? _rest$currentExperien : 0);\n  const {\n    0: challengesCompleted,\n    1: setChallengesCompleted\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])((_rest$challengesCompl = rest.challengesCompleted) !== null && _rest$challengesCompl !== void 0 ? _rest$challengesCompl : 0);\n  const {\n    0: activeChallenge,\n    1: setActiveChallenge\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])(null);\n  const {\n    0: isModalOpen,\n    1: setIsModalOpen\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])(false);\n  const experienceToNextLevel = Math.pow((level + 1) * 4, 2);\n  Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useEffect\"])(() => {\n    Notification.requestPermission();\n  }, []);\n  Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useEffect\"])(() => {\n    js_cookie__WEBPACK_IMPORTED_MODULE_3___default.a.set('level', String(level));\n    js_cookie__WEBPACK_IMPORTED_MODULE_3___default.a.set('currentExperience', String(currentExperience));\n    js_cookie__WEBPACK_IMPORTED_MODULE_3___default.a.set('challengesCompleted', String(challengesCompleted));\n  }, [levelUp, currentExperience, challengesCompleted]);\n\n  function levelUp() {\n    setLevel(level + 1);\n    setIsModalOpen(true);\n  }\n\n  function closeLevelUpModal() {\n    setIsModalOpen(false);\n  }\n\n  function startNewChallenge() {\n    const randomChallengeIndex = Math.floor(Math.random() * _challenges_json__WEBPACK_IMPORTED_MODULE_2__.length);\n    const challenge = _challenges_json__WEBPACK_IMPORTED_MODULE_2__[randomChallengeIndex];\n    setActiveChallenge(challenge);\n    new Audio('/notification.mp3').play();\n\n    if (Notification.permission === 'granted') {\n      new Notification('Novo Desafio', {\n        body: `Valendo ${challenge.amount}xp!`\n      });\n    }\n  }\n\n  function resetChallenge() {\n    setActiveChallenge(null);\n  }\n\n  function completeChallenge() {\n    if (!activeChallenge) {\n      return;\n    }\n\n    const {\n      amount\n    } = activeChallenge;\n    let finalExperience = currentExperience + amount;\n\n    if (finalExperience >= experienceToNextLevel) {\n      finalExperience = finalExperience - experienceToNextLevel;\n      levelUp();\n    }\n\n    setCurrentExperience(finalExperience);\n    setActiveChallenge(null);\n    setChallengesCompleted(challengesCompleted + 1);\n  }\n\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(ChallengesContext.Provider, {\n    value: {\n      level,\n      currentExperience,\n      challengesCompleted,\n      levelUp,\n      startNewChallenge,\n      resetChallenge,\n      activeChallenge,\n      experienceToNextLevel,\n      completeChallenge,\n      closeLevelUpModal\n    },\n    children: [children, isModalOpen && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_LevelUpModal__WEBPACK_IMPORTED_MODULE_4__[\"LevelUpModal\"], {}, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 114,\n      columnNumber: 30\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 100,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29udGV4dHMvQ2hhbGxlbmdlc0NvbnRleHQudHN4P2ViMjgiXSwibmFtZXMiOlsiQ2hhbGxlbmdlc0NvbnRleHQiLCJjcmVhdGVDb250ZXh0IiwiQ2hhbGxlbmdlc1Byb3ZpZGVyIiwiY2hpbGRyZW4iLCJyZXN0IiwibGV2ZWwiLCJzZXRMZXZlbCIsInVzZVN0YXRlIiwiY3VycmVudEV4cGVyaWVuY2UiLCJzZXRDdXJyZW50RXhwZXJpZW5jZSIsImNoYWxsZW5nZXNDb21wbGV0ZWQiLCJzZXRDaGFsbGVuZ2VzQ29tcGxldGVkIiwiYWN0aXZlQ2hhbGxlbmdlIiwic2V0QWN0aXZlQ2hhbGxlbmdlIiwiaXNNb2RhbE9wZW4iLCJzZXRJc01vZGFsT3BlbiIsImV4cGVyaWVuY2VUb05leHRMZXZlbCIsIk1hdGgiLCJwb3ciLCJ1c2VFZmZlY3QiLCJOb3RpZmljYXRpb24iLCJyZXF1ZXN0UGVybWlzc2lvbiIsIkNvb2tpZXMiLCJzZXQiLCJTdHJpbmciLCJsZXZlbFVwIiwiY2xvc2VMZXZlbFVwTW9kYWwiLCJzdGFydE5ld0NoYWxsZW5nZSIsInJhbmRvbUNoYWxsZW5nZUluZGV4IiwiZmxvb3IiLCJyYW5kb20iLCJjaGFsbGVuZ2VzIiwibGVuZ3RoIiwiY2hhbGxlbmdlIiwiQXVkaW8iLCJwbGF5IiwicGVybWlzc2lvbiIsImJvZHkiLCJhbW91bnQiLCJyZXNldENoYWxsZW5nZSIsImNvbXBsZXRlQ2hhbGxlbmdlIiwiZmluYWxFeHBlcmllbmNlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUEwQk8sTUFBTUEsaUJBQWlCLGdCQUFHQywyREFBYSxDQUFDLEVBQUQsQ0FBdkM7QUFFQSxTQUFTQyxrQkFBVCxPQUF5RTtBQUFBOztBQUFBLE1BQTdDO0FBQUNDO0FBQUQsR0FBNkM7QUFBQSxNQUEvQkMsSUFBK0I7O0FBQzVFLFFBQU07QUFBQSxPQUFDQyxLQUFEO0FBQUEsT0FBUUM7QUFBUixNQUFvQkMsc0RBQVEsZ0JBQUNILElBQUksQ0FBQ0MsS0FBTixxREFBZSxDQUFmLENBQWxDO0FBQ0EsUUFBTTtBQUFBLE9BQUNHLGlCQUFEO0FBQUEsT0FBb0JDO0FBQXBCLE1BQTRDRixzREFBUSwwQkFBQ0gsSUFBSSxDQUFDSSxpQkFBTix5RUFBMkIsQ0FBM0IsQ0FBMUQ7QUFDQSxRQUFNO0FBQUEsT0FBQ0UsbUJBQUQ7QUFBQSxPQUFzQkM7QUFBdEIsTUFBZ0RKLHNEQUFRLDBCQUFDSCxJQUFJLENBQUNNLG1CQUFOLHlFQUE2QixDQUE3QixDQUE5RDtBQUVBLFFBQU07QUFBQSxPQUFDRSxlQUFEO0FBQUEsT0FBa0JDO0FBQWxCLE1BQXdDTixzREFBUSxDQUFDLElBQUQsQ0FBdEQ7QUFFQSxRQUFNO0FBQUEsT0FBQ08sV0FBRDtBQUFBLE9BQWNDO0FBQWQsTUFBZ0NSLHNEQUFRLENBQUMsS0FBRCxDQUE5QztBQUVBLFFBQU1TLHFCQUFxQixHQUFHQyxJQUFJLENBQUNDLEdBQUwsQ0FBUyxDQUFDYixLQUFLLEdBQUcsQ0FBVCxJQUFhLENBQXRCLEVBQXlCLENBQXpCLENBQTlCO0FBRUFjLHlEQUFTLENBQUMsTUFBSTtBQUNWQyxnQkFBWSxDQUFDQyxpQkFBYjtBQUNILEdBRlEsRUFFTixFQUZNLENBQVQ7QUFJQUYseURBQVMsQ0FBQyxNQUFJO0FBQ1ZHLG9EQUFPLENBQUNDLEdBQVIsQ0FBWSxPQUFaLEVBQXFCQyxNQUFNLENBQUNuQixLQUFELENBQTNCO0FBQ0FpQixvREFBTyxDQUFDQyxHQUFSLENBQVksbUJBQVosRUFBaUNDLE1BQU0sQ0FBQ2hCLGlCQUFELENBQXZDO0FBQ0FjLG9EQUFPLENBQUNDLEdBQVIsQ0FBWSxxQkFBWixFQUFtQ0MsTUFBTSxDQUFDZCxtQkFBRCxDQUF6QztBQUNILEdBSlEsRUFJTixDQUFDZSxPQUFELEVBQVVqQixpQkFBVixFQUE2QkUsbUJBQTdCLENBSk0sQ0FBVDs7QUFNQSxXQUFTZSxPQUFULEdBQWtCO0FBQ2RuQixZQUFRLENBQUNELEtBQUssR0FBRyxDQUFULENBQVI7QUFDQVUsa0JBQWMsQ0FBQyxJQUFELENBQWQ7QUFDSDs7QUFFRCxXQUFTVyxpQkFBVCxHQUE0QjtBQUN4Qlgsa0JBQWMsQ0FBQyxLQUFELENBQWQ7QUFDSDs7QUFFRCxXQUFTWSxpQkFBVCxHQUE0QjtBQUN4QixVQUFNQyxvQkFBb0IsR0FBR1gsSUFBSSxDQUFDWSxLQUFMLENBQVdaLElBQUksQ0FBQ2EsTUFBTCxLQUFnQkMsNkNBQVUsQ0FBQ0MsTUFBdEMsQ0FBN0I7QUFDQSxVQUFNQyxTQUFTLEdBQUdGLDZDQUFVLENBQUNILG9CQUFELENBQTVCO0FBRUFmLHNCQUFrQixDQUFDb0IsU0FBRCxDQUFsQjtBQUVBLFFBQUlDLEtBQUosQ0FBVSxtQkFBVixFQUErQkMsSUFBL0I7O0FBRUEsUUFBR2YsWUFBWSxDQUFDZ0IsVUFBYixLQUE0QixTQUEvQixFQUF5QztBQUNyQyxVQUFJaEIsWUFBSixDQUFpQixjQUFqQixFQUFnQztBQUM1QmlCLFlBQUksRUFBRyxXQUFVSixTQUFTLENBQUNLLE1BQU87QUFETixPQUFoQztBQUdIO0FBQ0o7O0FBRUQsV0FBU0MsY0FBVCxHQUF5QjtBQUNyQjFCLHNCQUFrQixDQUFDLElBQUQsQ0FBbEI7QUFDSDs7QUFFRCxXQUFTMkIsaUJBQVQsR0FBNEI7QUFDeEIsUUFBRyxDQUFDNUIsZUFBSixFQUFvQjtBQUNoQjtBQUNIOztBQUNELFVBQU07QUFBQzBCO0FBQUQsUUFBVzFCLGVBQWpCO0FBQ0EsUUFBSTZCLGVBQWUsR0FBR2pDLGlCQUFpQixHQUFHOEIsTUFBMUM7O0FBRUEsUUFBR0csZUFBZSxJQUFJekIscUJBQXRCLEVBQTRDO0FBQ3hDeUIscUJBQWUsR0FBR0EsZUFBZSxHQUFHekIscUJBQXBDO0FBQ0FTLGFBQU87QUFFVjs7QUFFRGhCLHdCQUFvQixDQUFDZ0MsZUFBRCxDQUFwQjtBQUNBNUIsc0JBQWtCLENBQUMsSUFBRCxDQUFsQjtBQUNBRiwwQkFBc0IsQ0FBQ0QsbUJBQW1CLEdBQUcsQ0FBdkIsQ0FBdEI7QUFDSDs7QUFFRCxzQkFDSSxxRUFBQyxpQkFBRCxDQUFtQixRQUFuQjtBQUNBLFNBQUssRUFBRTtBQUFDTCxXQUFEO0FBQ05HLHVCQURNO0FBRUxFLHlCQUZLO0FBR0plLGFBSEk7QUFJSEUsdUJBSkc7QUFLSFksb0JBTEc7QUFNSDNCLHFCQU5HO0FBT0hJLDJCQVBHO0FBUUh3Qix1QkFSRztBQVNIZDtBQVRHLEtBRFA7QUFBQSxlQVlLdkIsUUFaTCxFQWNNVyxXQUFXLGlCQUFJLHFFQUFDLHFFQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFkckI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBREo7QUFrQkgiLCJmaWxlIjoiLi9zcmMvY29udGV4dHMvQ2hhbGxlbmdlc0NvbnRleHQudHN4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtjcmVhdGVDb250ZXh0ICx1c2VTdGF0ZSwgUmVhY3ROb2RlLCB1c2VFZmZlY3R9IGZyb20gJ3JlYWN0JztcbmltcG9ydCBjaGFsbGVuZ2VzIGZyb20gJy4uLy4uL2NoYWxsZW5nZXMuanNvbic7XG5pbXBvcnQgQ29va2llcyBmcm9tICdqcy1jb29raWUnO1xuaW1wb3J0IHsgTGV2ZWxVcE1vZGFsIH0gZnJvbSAnLi4vY29tcG9uZW50cy9MZXZlbFVwTW9kYWwnO1xuXG5pbnRlcmZhY2UgQ2hhbGxlbmdlc1Byb3ZpZGVyUHJvcHN7XG4gICAgY2hpbGRyZW46IFJlYWN0Tm9kZSxcbiAgICBsZXZlbCA6IG51bWJlcixcbiAgICBjdXJyZW50RXhwZXJpZW5jZSA6IG51bWJlcixcbiAgICBjaGFsbGVuZ2VzQ29tcGxldGVkIDogbnVtYmVyXG4gICAgICBcbn1cbmludGVyZmFjZSBDaGFsbGVuZ2V7XG4gICAgdHlwZTonYm9keScgfCAnZXllJyxcbiAgICBkZXNjcmlwdGlvbjogc3RyaW5nLFxuICAgIGFtb3VudDogbnVtYmVyXG59XG5pbnRlcmZhY2UgQ2hhbGxlbmdlc0NvbnRleERhdGF7XG4gICAgbGV2ZWw6IG51bWJlcixcbiAgICBjdXJyZW50RXhwZXJpZW5jZTogbnVtYmVyLFxuICAgIGNoYWxsZW5nZXNDb21wbGV0ZWQgOiBudW1iZXIsXG4gICAgYWN0aXZlQ2hhbGxlbmdlOiBDaGFsbGVuZ2U7XG4gICAgZXhwZXJpZW5jZVRvTmV4dExldmVsOiBudW1iZXIsXG4gICAgbGV2ZWxVcCA6ICgpPT52b2lkLFxuICAgIHN0YXJ0TmV3Q2hhbGxlbmdlIDogKCk9PnZvaWQsXG4gICAgcmVzZXRDaGFsbGVuZ2UgOigpPT4gdm9pZCxcbiAgICBjb21wbGV0ZUNoYWxsZW5nZSA6KCk9PiB2b2lkLFxuICAgIGNsb3NlTGV2ZWxVcE1vZGFsIDooKT0+IHZvaWQsXG59XG5leHBvcnQgY29uc3QgQ2hhbGxlbmdlc0NvbnRleHQgPSBjcmVhdGVDb250ZXh0KHt9IGFzIENoYWxsZW5nZXNDb250ZXhEYXRhKTtcblxuZXhwb3J0IGZ1bmN0aW9uIENoYWxsZW5nZXNQcm92aWRlcih7Y2hpbGRyZW4sIC4uLnJlc3R9OiBDaGFsbGVuZ2VzUHJvdmlkZXJQcm9wcyl7XG4gICAgY29uc3QgW2xldmVsLCBzZXRMZXZlbF0gPSB1c2VTdGF0ZShyZXN0LmxldmVsID8/IDEpO1xuICAgIGNvbnN0IFtjdXJyZW50RXhwZXJpZW5jZSwgc2V0Q3VycmVudEV4cGVyaWVuY2VdID0gdXNlU3RhdGUocmVzdC5jdXJyZW50RXhwZXJpZW5jZSA/PyAwKTtcbiAgICBjb25zdCBbY2hhbGxlbmdlc0NvbXBsZXRlZCwgc2V0Q2hhbGxlbmdlc0NvbXBsZXRlZF0gPSB1c2VTdGF0ZShyZXN0LmNoYWxsZW5nZXNDb21wbGV0ZWQgPz8gMCk7XG5cbiAgICBjb25zdCBbYWN0aXZlQ2hhbGxlbmdlLCBzZXRBY3RpdmVDaGFsbGVuZ2VdID0gdXNlU3RhdGUobnVsbCk7XG5cbiAgICBjb25zdCBbaXNNb2RhbE9wZW4sIHNldElzTW9kYWxPcGVuXSA9IHVzZVN0YXRlKGZhbHNlKTtcblxuICAgIGNvbnN0IGV4cGVyaWVuY2VUb05leHRMZXZlbCA9IE1hdGgucG93KChsZXZlbCArIDEpKiA0ICwyKTtcblxuICAgIHVzZUVmZmVjdCgoKT0+e1xuICAgICAgICBOb3RpZmljYXRpb24ucmVxdWVzdFBlcm1pc3Npb24oKTtcbiAgICB9LCBbXSlcblxuICAgIHVzZUVmZmVjdCgoKT0+e1xuICAgICAgICBDb29raWVzLnNldCgnbGV2ZWwnLCBTdHJpbmcobGV2ZWwpKTtcbiAgICAgICAgQ29va2llcy5zZXQoJ2N1cnJlbnRFeHBlcmllbmNlJywgU3RyaW5nKGN1cnJlbnRFeHBlcmllbmNlKSk7XG4gICAgICAgIENvb2tpZXMuc2V0KCdjaGFsbGVuZ2VzQ29tcGxldGVkJywgU3RyaW5nKGNoYWxsZW5nZXNDb21wbGV0ZWQpKTtcbiAgICB9LCBbbGV2ZWxVcCwgY3VycmVudEV4cGVyaWVuY2UsIGNoYWxsZW5nZXNDb21wbGV0ZWRdKTtcblxuICAgIGZ1bmN0aW9uIGxldmVsVXAoKXtcbiAgICAgICAgc2V0TGV2ZWwobGV2ZWwgKyAxKTtcbiAgICAgICAgc2V0SXNNb2RhbE9wZW4odHJ1ZSk7XG4gICAgfVxuXG4gICAgZnVuY3Rpb24gY2xvc2VMZXZlbFVwTW9kYWwoKXtcbiAgICAgICAgc2V0SXNNb2RhbE9wZW4oZmFsc2UpO1xuICAgIH1cblxuICAgIGZ1bmN0aW9uIHN0YXJ0TmV3Q2hhbGxlbmdlKCl7XG4gICAgICAgIGNvbnN0IHJhbmRvbUNoYWxsZW5nZUluZGV4ID0gTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogY2hhbGxlbmdlcy5sZW5ndGgpO1xuICAgICAgICBjb25zdCBjaGFsbGVuZ2UgPSBjaGFsbGVuZ2VzW3JhbmRvbUNoYWxsZW5nZUluZGV4XTtcblxuICAgICAgICBzZXRBY3RpdmVDaGFsbGVuZ2UoY2hhbGxlbmdlKTtcblxuICAgICAgICBuZXcgQXVkaW8oJy9ub3RpZmljYXRpb24ubXAzJykucGxheSgpO1xuXG4gICAgICAgIGlmKE5vdGlmaWNhdGlvbi5wZXJtaXNzaW9uID09PSAnZ3JhbnRlZCcpe1xuICAgICAgICAgICAgbmV3IE5vdGlmaWNhdGlvbignTm92byBEZXNhZmlvJyx7XG4gICAgICAgICAgICAgICAgYm9keTogYFZhbGVuZG8gJHtjaGFsbGVuZ2UuYW1vdW50fXhwIWBcbiAgICAgICAgICAgIH0pXG4gICAgICAgIH1cbiAgICB9XG5cbiAgICBmdW5jdGlvbiByZXNldENoYWxsZW5nZSgpe1xuICAgICAgICBzZXRBY3RpdmVDaGFsbGVuZ2UobnVsbCk7XG4gICAgfVxuXG4gICAgZnVuY3Rpb24gY29tcGxldGVDaGFsbGVuZ2UoKXtcbiAgICAgICAgaWYoIWFjdGl2ZUNoYWxsZW5nZSl7XG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgIH1cbiAgICAgICAgY29uc3Qge2Ftb3VudH0gPSBhY3RpdmVDaGFsbGVuZ2U7XG4gICAgICAgIGxldCBmaW5hbEV4cGVyaWVuY2UgPSBjdXJyZW50RXhwZXJpZW5jZSArIGFtb3VudDtcblxuICAgICAgICBpZihmaW5hbEV4cGVyaWVuY2UgPj0gZXhwZXJpZW5jZVRvTmV4dExldmVsKXtcbiAgICAgICAgICAgIGZpbmFsRXhwZXJpZW5jZSA9IGZpbmFsRXhwZXJpZW5jZSAtIGV4cGVyaWVuY2VUb05leHRMZXZlbDtcbiAgICAgICAgICAgIGxldmVsVXAoKTtcbiAgICAgICAgICAgIFxuICAgICAgICB9XG5cbiAgICAgICAgc2V0Q3VycmVudEV4cGVyaWVuY2UoZmluYWxFeHBlcmllbmNlKTtcbiAgICAgICAgc2V0QWN0aXZlQ2hhbGxlbmdlKG51bGwpO1xuICAgICAgICBzZXRDaGFsbGVuZ2VzQ29tcGxldGVkKGNoYWxsZW5nZXNDb21wbGV0ZWQgKyAxKTtcbiAgICB9XG5cbiAgICByZXR1cm4gKFxuICAgICAgICA8Q2hhbGxlbmdlc0NvbnRleHQuUHJvdmlkZXIgXG4gICAgICAgIHZhbHVlPXt7bGV2ZWwsXG4gICAgICAgICBjdXJyZW50RXhwZXJpZW5jZSxcbiAgICAgICAgICBjaGFsbGVuZ2VzQ29tcGxldGVkLFxuICAgICAgICAgICBsZXZlbFVwLFxuICAgICAgICAgICAgc3RhcnROZXdDaGFsbGVuZ2UsXG4gICAgICAgICAgICByZXNldENoYWxsZW5nZSxcbiAgICAgICAgICAgIGFjdGl2ZUNoYWxsZW5nZSxcbiAgICAgICAgICAgIGV4cGVyaWVuY2VUb05leHRMZXZlbCxcbiAgICAgICAgICAgIGNvbXBsZXRlQ2hhbGxlbmdlLCBcbiAgICAgICAgICAgIGNsb3NlTGV2ZWxVcE1vZGFsXG4gICAgICAgICAgICB9fT5cbiAgICAgICAgICAgIHtjaGlsZHJlbn1cblxuICAgICAgICAgICAgeyBpc01vZGFsT3BlbiAmJiA8TGV2ZWxVcE1vZGFsIC8+IH1cbiAgICAgICAgPC9DaGFsbGVuZ2VzQ29udGV4dC5Qcm92aWRlcj5cbiAgICApO1xufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/contexts/ChallengesContext.tsx\n");
+
+/***/ }),
+
+/***/ "./src/contexts/CountdownContext.tsx":
+/*!*******************************************!*\
+  !*** ./src/contexts/CountdownContext.tsx ***!
+  \*******************************************/
+/*! exports provided: CountdownContext, CountdownProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CountdownContext\", function() { return CountdownContext; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CountdownProvider\", function() { return CountdownProvider; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _ChallengesContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChallengesContext */ \"./src/contexts/ChallengesContext.tsx\");\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/contexts/CountdownContext.tsx\";\n\n\nconst CountdownContext = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_1__[\"createContext\"])({});\nlet countdownTimeout;\nfunction CountdownProvider({\n  children\n}) {\n  const {\n    startNewChallenge\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useContext\"])(_ChallengesContext__WEBPACK_IMPORTED_MODULE_2__[\"ChallengesContext\"]);\n  const {\n    0: time,\n    1: setTime\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])(0.05 * 60);\n  const minutes = Math.floor(time / 60);\n  const seconds = time % 60;\n  const {\n    0: isActive,\n    1: setIsActive\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])(false);\n  const {\n    0: hasFinished,\n    1: setHasFinished\n  } = Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useState\"])(false);\n\n  function startCountdown() {\n    setIsActive(true); //start countdown\n  }\n\n  function resetCountdown() {\n    clearTimeout(countdownTimeout);\n    setHasFinished(false);\n    setIsActive(false);\n    setTime(0.1 * 60);\n  }\n\n  Object(react__WEBPACK_IMPORTED_MODULE_1__[\"useEffect\"])(() => {\n    if (isActive && time > 0) {\n      countdownTimeout = setTimeout(() => {\n        setTime(time - 1);\n      }, 1000);\n    } else if (isActive && time === 0) {\n      setHasFinished(true);\n      setIsActive(false);\n      startNewChallenge();\n    }\n  }, [isActive, time]);\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(CountdownContext.Provider, {\n    value: {\n      minutes,\n      seconds,\n      hasFinished,\n      isActive,\n      startCountdown,\n      resetCountdown\n    },\n    children: children\n  }, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 55,\n    columnNumber: 9\n  }, this);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29udGV4dHMvQ291bnRkb3duQ29udGV4dC50c3g/ZmU5ZCJdLCJuYW1lcyI6WyJDb3VudGRvd25Db250ZXh0IiwiY3JlYXRlQ29udGV4dCIsImNvdW50ZG93blRpbWVvdXQiLCJDb3VudGRvd25Qcm92aWRlciIsImNoaWxkcmVuIiwic3RhcnROZXdDaGFsbGVuZ2UiLCJ1c2VDb250ZXh0IiwiQ2hhbGxlbmdlc0NvbnRleHQiLCJ0aW1lIiwic2V0VGltZSIsInVzZVN0YXRlIiwibWludXRlcyIsIk1hdGgiLCJmbG9vciIsInNlY29uZHMiLCJpc0FjdGl2ZSIsInNldElzQWN0aXZlIiwiaGFzRmluaXNoZWQiLCJzZXRIYXNGaW5pc2hlZCIsInN0YXJ0Q291bnRkb3duIiwicmVzZXRDb3VudGRvd24iLCJjbGVhclRpbWVvdXQiLCJ1c2VFZmZlY3QiLCJzZXRUaW1lb3V0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUE7QUFDQTtBQWNPLE1BQU1BLGdCQUFnQixnQkFBR0MsMkRBQWEsQ0FBQyxFQUFELENBQXRDO0FBQ1AsSUFBSUMsZ0JBQUo7QUFDTyxTQUFTQyxpQkFBVCxDQUEyQjtBQUFDQztBQUFELENBQTNCLEVBQStEO0FBRWxFLFFBQU07QUFBRUM7QUFBRixNQUF3QkMsd0RBQVUsQ0FBQ0Msb0VBQUQsQ0FBeEM7QUFFQSxRQUFNO0FBQUEsT0FBQ0MsSUFBRDtBQUFBLE9BQU9DO0FBQVAsTUFBa0JDLHNEQUFRLENBQUMsT0FBTyxFQUFSLENBQWhDO0FBRUEsUUFBTUMsT0FBTyxHQUFHQyxJQUFJLENBQUNDLEtBQUwsQ0FBV0wsSUFBSSxHQUFDLEVBQWhCLENBQWhCO0FBQ0EsUUFBTU0sT0FBTyxHQUFHTixJQUFJLEdBQUcsRUFBdkI7QUFFQSxRQUFNO0FBQUEsT0FBQ08sUUFBRDtBQUFBLE9BQVdDO0FBQVgsTUFBMEJOLHNEQUFRLENBQUMsS0FBRCxDQUF4QztBQUNBLFFBQU07QUFBQSxPQUFDTyxXQUFEO0FBQUEsT0FBY0M7QUFBZCxNQUFnQ1Isc0RBQVEsQ0FBQyxLQUFELENBQTlDOztBQUlBLFdBQVNTLGNBQVQsR0FBeUI7QUFDckJILGVBQVcsQ0FBQyxJQUFELENBQVgsQ0FEcUIsQ0FDRjtBQUN0Qjs7QUFFRCxXQUFTSSxjQUFULEdBQXlCO0FBQ3JCQyxnQkFBWSxDQUFDbkIsZ0JBQUQsQ0FBWjtBQUNBZ0Isa0JBQWMsQ0FBQyxLQUFELENBQWQ7QUFDQUYsZUFBVyxDQUFDLEtBQUQsQ0FBWDtBQUNBUCxXQUFPLENBQUMsTUFBTSxFQUFQLENBQVA7QUFDSDs7QUFFRGEseURBQVMsQ0FBQyxNQUFJO0FBQ1YsUUFBR1AsUUFBUSxJQUFJUCxJQUFJLEdBQUcsQ0FBdEIsRUFBd0I7QUFDcEJOLHNCQUFnQixHQUFHcUIsVUFBVSxDQUFDLE1BQUk7QUFDOUJkLGVBQU8sQ0FBQ0QsSUFBSSxHQUFHLENBQVIsQ0FBUDtBQUNILE9BRjRCLEVBRTFCLElBRjBCLENBQTdCO0FBR0gsS0FKRCxNQUlNLElBQUdPLFFBQVEsSUFBSVAsSUFBSSxLQUFLLENBQXhCLEVBQTBCO0FBQzVCVSxvQkFBYyxDQUFDLElBQUQsQ0FBZDtBQUNBRixpQkFBVyxDQUFDLEtBQUQsQ0FBWDtBQUNBWCx1QkFBaUI7QUFDcEI7QUFDSixHQVZRLEVBVU4sQ0FBQ1UsUUFBRCxFQUFXUCxJQUFYLENBVk0sQ0FBVDtBQVdBLHNCQUNJLHFFQUFDLGdCQUFELENBQWtCLFFBQWxCO0FBQTJCLFNBQUssRUFBRTtBQUFDRyxhQUFEO0FBQVVHLGFBQVY7QUFBbUJHLGlCQUFuQjtBQUFnQ0YsY0FBaEM7QUFBMENJLG9CQUExQztBQUEwREM7QUFBMUQsS0FBbEM7QUFBQSxjQUNLaEI7QUFETDtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBREo7QUFLSCIsImZpbGUiOiIuL3NyYy9jb250ZXh0cy9Db3VudGRvd25Db250ZXh0LnRzeC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Y3JlYXRlQ29udGV4dCwgUmVhY3ROb2RlLCB1c2VDb250ZXh0LCB1c2VFZmZlY3QsIHVzZVN0YXRlIH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQge0NoYWxsZW5nZXNDb250ZXh0fSBmcm9tIFwiLi9DaGFsbGVuZ2VzQ29udGV4dFwiO1xuXG5pbnRlcmZhY2UgQ291bnRkb3duQ29udGV4dERhdGF7XG4gICAgbWludXRlczogbnVtYmVyLFxuICAgIHNlY29uZHM6IG51bWJlcixcbiAgICBoYXNGaW5pc2hlZCA6IGJvb2xlYW4sXG4gICAgaXNBY3RpdmU6IGJvb2xlYW4sXG4gICAgc3RhcnRDb3VudGRvd24gOigpPT4gdm9pZCxcbiAgICByZXNldENvdW50ZG93biA6KCk9PiB2b2lkXG59XG5pbnRlcmZhY2UgQ291bnRkb3duUHJvdmlkZXJQcm9wc3tcbiAgICBjaGlsZHJlbjogUmVhY3ROb2RlO1xufVxuXG5leHBvcnQgY29uc3QgQ291bnRkb3duQ29udGV4dCA9IGNyZWF0ZUNvbnRleHQoe30gYXMgQ291bnRkb3duQ29udGV4dERhdGEpO1xubGV0IGNvdW50ZG93blRpbWVvdXQ6IE5vZGVKUy5UaW1lb3V0O1xuZXhwb3J0IGZ1bmN0aW9uIENvdW50ZG93blByb3ZpZGVyKHtjaGlsZHJlbn0gOiBDb3VudGRvd25Qcm92aWRlclByb3BzKXtcblxuICAgIGNvbnN0IHsgc3RhcnROZXdDaGFsbGVuZ2UgfSA9IHVzZUNvbnRleHQoQ2hhbGxlbmdlc0NvbnRleHQpO1xuXG4gICAgY29uc3QgW3RpbWUsIHNldFRpbWVdID0gdXNlU3RhdGUoMC4wNSAqIDYwKTtcblxuICAgIGNvbnN0IG1pbnV0ZXMgPSBNYXRoLmZsb29yKHRpbWUvNjApO1xuICAgIGNvbnN0IHNlY29uZHMgPSB0aW1lICUgNjA7XG5cbiAgICBjb25zdCBbaXNBY3RpdmUsIHNldElzQWN0aXZlXSA9IHVzZVN0YXRlKGZhbHNlKTtcbiAgICBjb25zdCBbaGFzRmluaXNoZWQsIHNldEhhc0ZpbmlzaGVkXSA9IHVzZVN0YXRlKGZhbHNlKTtcblxuXG5cbiAgICBmdW5jdGlvbiBzdGFydENvdW50ZG93bigpe1xuICAgICAgICBzZXRJc0FjdGl2ZSh0cnVlKTsgLy9zdGFydCBjb3VudGRvd25cbiAgICB9XG5cbiAgICBmdW5jdGlvbiByZXNldENvdW50ZG93bigpe1xuICAgICAgICBjbGVhclRpbWVvdXQoY291bnRkb3duVGltZW91dCk7XG4gICAgICAgIHNldEhhc0ZpbmlzaGVkKGZhbHNlKTtcbiAgICAgICAgc2V0SXNBY3RpdmUoZmFsc2UpO1xuICAgICAgICBzZXRUaW1lKDAuMSAqIDYwKTtcbiAgICB9XG5cbiAgICB1c2VFZmZlY3QoKCk9PntcbiAgICAgICAgaWYoaXNBY3RpdmUgJiYgdGltZSA+IDApe1xuICAgICAgICAgICAgY291bnRkb3duVGltZW91dCA9IHNldFRpbWVvdXQoKCk9PntcbiAgICAgICAgICAgICAgICBzZXRUaW1lKHRpbWUgLSAxKTtcbiAgICAgICAgICAgIH0sIDEwMDApO1xuICAgICAgICB9ZWxzZSBpZihpc0FjdGl2ZSAmJiB0aW1lID09PSAwKXtcbiAgICAgICAgICAgIHNldEhhc0ZpbmlzaGVkKHRydWUpO1xuICAgICAgICAgICAgc2V0SXNBY3RpdmUoZmFsc2UpO1xuICAgICAgICAgICAgc3RhcnROZXdDaGFsbGVuZ2UoKTtcbiAgICAgICAgfVxuICAgIH0sIFtpc0FjdGl2ZSwgdGltZV0pXG4gICAgcmV0dXJuKFxuICAgICAgICA8Q291bnRkb3duQ29udGV4dC5Qcm92aWRlciB2YWx1ZT17e21pbnV0ZXMsIHNlY29uZHMsIGhhc0ZpbmlzaGVkLCBpc0FjdGl2ZSwgc3RhcnRDb3VudGRvd24sIHJlc2V0Q291bnRkb3dufX0+XG4gICAgICAgICAgICB7Y2hpbGRyZW59XG4gICAgICAgIDwvQ291bnRkb3duQ29udGV4dC5Qcm92aWRlcj5cbiAgICApO1xufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/contexts/CountdownContext.tsx\n");
+
+/***/ }),
+
+/***/ "./src/pages/index.tsx":
+/*!*****************************!*\
+  !*** ./src/pages/index.tsx ***!
+  \*****************************/
+/*! exports provided: default, getServerSideProps */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Home; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getServerSideProps\", function() { return getServerSideProps; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_ExperienceBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ExperienceBar */ \"./src/components/ExperienceBar.tsx\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components_Profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Profile */ \"./src/components/Profile.tsx\");\n/* harmony import */ var _styles_Pages_Home_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/Pages/Home.module.css */ \"./src/styles/Pages/Home.module.css\");\n/* harmony import */ var _styles_Pages_Home_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_Pages_Home_module_css__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _components_CompletedChallenges__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/CompletedChallenges */ \"./src/components/CompletedChallenges.tsx\");\n/* harmony import */ var _components_Countdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Countdown */ \"./src/components/Countdown.tsx\");\n/* harmony import */ var _components_ChallengeBox__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ChallengeBox */ \"./src/components/ChallengeBox.tsx\");\n/* harmony import */ var _contexts_CountdownContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../contexts/CountdownContext */ \"./src/contexts/CountdownContext.tsx\");\n/* harmony import */ var _contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../contexts/ChallengesContext */ \"./src/contexts/ChallengesContext.tsx\");\n\nvar _jsxFileName = \"/Users/rodrigoantunes/Sites/Rodrigo/stepbystepNext/src/pages/index.tsx\";\n\n\n\n\n\n\n\n\n\nfunction Home(props) {\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_contexts_ChallengesContext__WEBPACK_IMPORTED_MODULE_9__[\"ChallengesProvider\"], {\n    level: props.level,\n    currentExperience: props.currentExperience,\n    challengesCompleted: props.challengesCompleted,\n    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n      className: _styles_Pages_Home_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.container,\n      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"title\", {\n          children: \"Inicio | StepByStep\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 29,\n          columnNumber: 15\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 29,\n        columnNumber: 9\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_ExperienceBar__WEBPACK_IMPORTED_MODULE_1__[\"ExperienceBar\"], {}, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 30,\n        columnNumber: 9\n      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_contexts_CountdownContext__WEBPACK_IMPORTED_MODULE_8__[\"CountdownProvider\"], {\n        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"section\", {\n          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_Profile__WEBPACK_IMPORTED_MODULE_3__[\"Profile\"], {}, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 34,\n              columnNumber: 13\n            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n              className: _styles_Pages_Home_module_css__WEBPACK_IMPORTED_MODULE_4___default.a.syfyContainer,\n              children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_CompletedChallenges__WEBPACK_IMPORTED_MODULE_5__[\"CompletedChallenger\"], {}, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 36,\n                columnNumber: 15\n              }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_Countdown__WEBPACK_IMPORTED_MODULE_6__[\"Countdown\"], {}, void 0, false, {\n                fileName: _jsxFileName,\n                lineNumber: 37,\n                columnNumber: 15\n              }, this)]\n            }, void 0, true, {\n              fileName: _jsxFileName,\n              lineNumber: 35,\n              columnNumber: 13\n            }, this)]\n          }, void 0, true, {\n            fileName: _jsxFileName,\n            lineNumber: 33,\n            columnNumber: 11\n          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(_components_ChallengeBox__WEBPACK_IMPORTED_MODULE_7__[\"ChallengeBox\"], {}, void 0, false, {\n              fileName: _jsxFileName,\n              lineNumber: 41,\n              columnNumber: 13\n            }, this)\n          }, void 0, false, {\n            fileName: _jsxFileName,\n            lineNumber: 40,\n            columnNumber: 11\n          }, this)]\n        }, void 0, true, {\n          fileName: _jsxFileName,\n          lineNumber: 32,\n          columnNumber: 9\n        }, this)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 31,\n        columnNumber: 9\n      }, this)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 28,\n      columnNumber: 7\n    }, this)\n  }, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 23,\n    columnNumber: 5\n  }, this);\n}\nconst getServerSideProps = async ctx => {\n  const {\n    level,\n    currentExperience,\n    challengesCompleted\n  } = ctx.req.cookies;\n  return {\n    props: {\n      level: Number(level),\n      currentExperience: Number(currentExperience),\n      challengesCompleted: Number(challengesCompleted)\n    }\n  };\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvcGFnZXMvaW5kZXgudHN4PzQxZTAiXSwibmFtZXMiOlsiSG9tZSIsInByb3BzIiwibGV2ZWwiLCJjdXJyZW50RXhwZXJpZW5jZSIsImNoYWxsZW5nZXNDb21wbGV0ZWQiLCJzdHlsZXMiLCJjb250YWluZXIiLCJzeWZ5Q29udGFpbmVyIiwiZ2V0U2VydmVyU2lkZVByb3BzIiwiY3R4IiwicmVxIiwiY29va2llcyIsIk51bWJlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBUWUsU0FBU0EsSUFBVCxDQUFjQyxLQUFkLEVBQWlDO0FBRzlDLHNCQUNFLHFFQUFDLDhFQUFEO0FBQ0EsU0FBSyxFQUFFQSxLQUFLLENBQUNDLEtBRGI7QUFFQSxxQkFBaUIsRUFBRUQsS0FBSyxDQUFDRSxpQkFGekI7QUFHQSx1QkFBbUIsRUFBRUYsS0FBSyxDQUFDRyxtQkFIM0I7QUFBQSwyQkFLRTtBQUFLLGVBQVMsRUFBRUMsb0VBQU0sQ0FBQ0MsU0FBdkI7QUFBQSw4QkFDRSxxRUFBQyxnREFBRDtBQUFBLCtCQUFNO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQU47QUFBQTtBQUFBO0FBQUE7QUFBQSxjQURGLGVBRUUscUVBQUMsdUVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQUZGLGVBR0UscUVBQUMsNEVBQUQ7QUFBQSwrQkFDQTtBQUFBLGtDQUNFO0FBQUEsb0NBQ0UscUVBQUMsMkRBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxvQkFERixlQUVFO0FBQUssdUJBQVMsRUFBRUQsb0VBQU0sQ0FBQ0UsYUFBdkI7QUFBQSxzQ0FDRSxxRUFBQyxtRkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLHNCQURGLGVBRUUscUVBQUMsK0RBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxzQkFGRjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsb0JBRkY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGtCQURGLGVBUUU7QUFBQSxtQ0FDRSxxRUFBQyxxRUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBREY7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQkFSRjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFEQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBSEY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBTEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxVQURGO0FBMEJEO0FBRU0sTUFBTUMsa0JBQXVDLEdBQUssTUFBT0MsR0FBUCxJQUFlO0FBQ3RFLFFBQU07QUFBQ1AsU0FBRDtBQUFRQyxxQkFBUjtBQUEyQkM7QUFBM0IsTUFBa0RLLEdBQUcsQ0FBQ0MsR0FBSixDQUFRQyxPQUFoRTtBQUNBLFNBQU87QUFDTFYsU0FBSyxFQUFFO0FBQ0xDLFdBQUssRUFBSVUsTUFBTSxDQUFDVixLQUFELENBRFY7QUFFTEMsdUJBQWlCLEVBQUVTLE1BQU0sQ0FBQ1QsaUJBQUQsQ0FGcEI7QUFHTEMseUJBQW1CLEVBQUdRLE1BQU0sQ0FBQ1IsbUJBQUQ7QUFIdkI7QUFERixHQUFQO0FBT0QsQ0FUTSIsImZpbGUiOiIuL3NyYy9wYWdlcy9pbmRleC50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcbmltcG9ydCB7IEV4cGVyaWVuY2VCYXIgfSBmcm9tIFwiLi4vY29tcG9uZW50cy9FeHBlcmllbmNlQmFyXCI7XG5pbXBvcnQgIEhlYWQgIGZyb20gJ25leHQvaGVhZCc7XG5pbXBvcnQgeyBQcm9maWxlIH0gZnJvbSBcIi4uL2NvbXBvbmVudHMvUHJvZmlsZVwiO1xuaW1wb3J0IHN0eWxlcyBmcm9tICcuLi9zdHlsZXMvUGFnZXMvSG9tZS5tb2R1bGUuY3NzJztcbmltcG9ydCB7IENvbXBsZXRlZENoYWxsZW5nZXIgfSBmcm9tIFwiLi4vY29tcG9uZW50cy9Db21wbGV0ZWRDaGFsbGVuZ2VzXCI7XG5pbXBvcnQgeyBDb3VudGRvd24gfSBmcm9tIFwiLi4vY29tcG9uZW50cy9Db3VudGRvd25cIjtcbmltcG9ydCB7IENoYWxsZW5nZUJveCB9IGZyb20gXCIuLi9jb21wb25lbnRzL0NoYWxsZW5nZUJveFwiO1xuaW1wb3J0IHsgQ291bnRkb3duUHJvdmlkZXIgfSBmcm9tIFwiLi4vY29udGV4dHMvQ291bnRkb3duQ29udGV4dFwiO1xuaW1wb3J0IHsgR2V0U2VydmVyU2lkZVByb3BzIH0gZnJvbSBcIm5leHRcIjtcbmltcG9ydCB7IENoYWxsZW5nZXNQcm92aWRlciB9IGZyb20gXCIuLi9jb250ZXh0cy9DaGFsbGVuZ2VzQ29udGV4dFwiO1xuaW50ZXJmYWNlIGhvbWVQcm9wcyB7XG4gIGxldmVsIDogbnVtYmVyXG4gIGN1cnJlbnRFeHBlcmllbmNlIDogbnVtYmVyXG4gIGNoYWxsZW5nZXNDb21wbGV0ZWQgOiBudW1iZXJcbn1cblxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBIb21lKHByb3BzIDogaG9tZVByb3BzKSB7XG5cbiBcbiAgcmV0dXJuIChcbiAgICA8Q2hhbGxlbmdlc1Byb3ZpZGVyIFxuICAgIGxldmVsPXtwcm9wcy5sZXZlbH0gXG4gICAgY3VycmVudEV4cGVyaWVuY2U9e3Byb3BzLmN1cnJlbnRFeHBlcmllbmNlfSBcbiAgICBjaGFsbGVuZ2VzQ29tcGxldGVkPXtwcm9wcy5jaGFsbGVuZ2VzQ29tcGxldGVkfVxuICAgID5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMuY29udGFpbmVyfT5cbiAgICAgICAgPEhlYWQ+PHRpdGxlPkluaWNpbyB8IFN0ZXBCeVN0ZXA8L3RpdGxlPjwvSGVhZD5cbiAgICAgICAgPEV4cGVyaWVuY2VCYXIgLz5cbiAgICAgICAgPENvdW50ZG93blByb3ZpZGVyPlxuICAgICAgICA8c2VjdGlvbj5cbiAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgPFByb2ZpbGUgLz5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtzdHlsZXMuc3lmeUNvbnRhaW5lcn0+XG4gICAgICAgICAgICAgIDxDb21wbGV0ZWRDaGFsbGVuZ2VyIC8+XG4gICAgICAgICAgICAgIDxDb3VudGRvd24vPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxDaGFsbGVuZ2VCb3gvPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L3NlY3Rpb24+XG4gICAgICAgIDwvQ291bnRkb3duUHJvdmlkZXI+XG4gICAgICA8L2Rpdj5cbiAgICA8L0NoYWxsZW5nZXNQcm92aWRlcj5cbiAgKSBcbn1cblxuZXhwb3J0IGNvbnN0IGdldFNlcnZlclNpZGVQcm9wcyA6IEdldFNlcnZlclNpZGVQcm9wcyAgPSAgYXN5bmMgKGN0eCkgPT4ge1xuICBjb25zdCB7bGV2ZWwsIGN1cnJlbnRFeHBlcmllbmNlLCBjaGFsbGVuZ2VzQ29tcGxldGVkfSA9IGN0eC5yZXEuY29va2llcztcbiAgcmV0dXJuIHtcbiAgICBwcm9wczoge1xuICAgICAgbGV2ZWwgOiAgTnVtYmVyKGxldmVsKSwgXG4gICAgICBjdXJyZW50RXhwZXJpZW5jZTogTnVtYmVyKGN1cnJlbnRFeHBlcmllbmNlKSxcbiAgICAgIGNoYWxsZW5nZXNDb21wbGV0ZWQgOiBOdW1iZXIoY2hhbGxlbmdlc0NvbXBsZXRlZClcbiAgICB9XG4gIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/pages/index.tsx\n");
+
+/***/ }),
+
+/***/ "./src/styles/Pages/Home.module.css":
+/*!******************************************!*\
+  !*** ./src/styles/Pages/Home.module.css ***!
+  \******************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"completedChallengesCointainer": "CompletedChallenger_completedChallengesCointainer__2_kup"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"container\": \"Home_container__3x6-b\",\n\t\"syfyContainer\": \"Home_syfyContainer__5uNTA\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL1BhZ2VzL0hvbWUubW9kdWxlLmNzcz9mMmY1Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiLi9zcmMvc3R5bGVzL1BhZ2VzL0hvbWUubW9kdWxlLmNzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcImNvbnRhaW5lclwiOiBcIkhvbWVfY29udGFpbmVyX18zeDYtYlwiLFxuXHRcInN5ZnlDb250YWluZXJcIjogXCJIb21lX3N5ZnlDb250YWluZXJfXzV1TlRBXCJcbn07XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/styles/Pages/Home.module.css\n");
 
 /***/ }),
 
-/***/ "c5aZ":
-/***/ (function(module) {
-
-module.exports = JSON.parse("[{\"type\":\"body\",\"description\":\"Estique um de seus braços com a palma da mão virada para frente e puxe os dedos para cima por 10 segundos por mão.\",\"amount\":80},{\"type\":\"body\",\"description\":\"Estique seu braço contra o peito e puxe-o utilizando o outro braço por 10 segundos por braço.\",\"amount\":60},{\"type\":\"body\",\"description\":\"Puxe seu pescoço com a ajuda da mão para a direita e para a esquerda, permanecendo na posição por alguns segundos.\",\"amount\":70},{\"type\":\"body\",\"description\":\"Com as duas mãos na parte de trás da cabeça, leve-a para baixo, alongando a parte de trás da região.\",\"amount\":60},{\"type\":\"body\",\"description\":\"Cruze as pernas e desça com as mãos esticadas em direção ao chão. Repita o movimento com a outra perna na frente.\",\"amount\":100},{\"type\":\"body\",\"description\":\"Sentado, abra as pernas e tente encostar as palmas das mãos no chão, repita 3 vezes por 5 segundos.\",\"amount\":80},{\"type\":\"body\",\"description\":\"Puxe o joelho de encontro ao peito e segure, troque de perna após 10 segundos.\",\"amount\":50},{\"type\":\"body\",\"description\":\"Sentado, cruze uma perna e incline seu tronco à frente, troque de perna após 10 segundos.\",\"amount\":80},{\"type\":\"eye\",\"description\":\"Sentado, feche os olhos e cubra-os com as palmas da mão durante 2 minutos, depois abra normalmente.\",\"amount\":90},{\"type\":\"eye\",\"description\":\"Em algum ambiente aberto, olhe o mais longe que puder em quatro direções por 3s, mexa apenas os olhos. Repita 3 vezes.\",\"amount\":140},{\"type\":\"eye\",\"description\":\"Usando os polegares, massage a área abaixo das sobrancelhas em movimentos circulares por 15 segundos.\",\"amount\":70},{\"type\":\"body\",\"description\":\"Em pé, gire a cintura o máximo que puder para a esquerda, segure por cinco segundos. Repita para a direita.\",\"amount\":90}]");
-
-/***/ }),
-
-/***/ "cDcd":
+/***/ "./src/styles/components/ChallengeBox.module.css":
+/*!*******************************************************!*\
+  !*** ./src/styles/components/ChallengeBox.module.css ***!
+  \*******************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+eval("// Exports\nmodule.exports = {\n\t\"challengeBoxContainer\": \"ChallengeBox_challengeBoxContainer__53AkF\",\n\t\"challengeNotActive\": \"ChallengeBox_challengeNotActive__35ixK\",\n\t\"challengeActive\": \"ChallengeBox_challengeActive__3mO_D\",\n\t\"challengeFailedButton\": \"ChallengeBox_challengeFailedButton__u8aFS\",\n\t\"challengeSucceededButton\": \"ChallengeBox_challengeSucceededButton__18bu2\",\n\t\"challengeImageMovement\": \"ChallengeBox_challengeImageMovement__3Y3lf\",\n\t\"image\": \"ChallengeBox_image__2hT1K\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvQ2hhbGxlbmdlQm94Lm1vZHVsZS5jc3M/ZTc5YiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiIuL3NyYy9zdHlsZXMvY29tcG9uZW50cy9DaGFsbGVuZ2VCb3gubW9kdWxlLmNzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcImNoYWxsZW5nZUJveENvbnRhaW5lclwiOiBcIkNoYWxsZW5nZUJveF9jaGFsbGVuZ2VCb3hDb250YWluZXJfXzUzQWtGXCIsXG5cdFwiY2hhbGxlbmdlTm90QWN0aXZlXCI6IFwiQ2hhbGxlbmdlQm94X2NoYWxsZW5nZU5vdEFjdGl2ZV9fMzVpeEtcIixcblx0XCJjaGFsbGVuZ2VBY3RpdmVcIjogXCJDaGFsbGVuZ2VCb3hfY2hhbGxlbmdlQWN0aXZlX18zbU9fRFwiLFxuXHRcImNoYWxsZW5nZUZhaWxlZEJ1dHRvblwiOiBcIkNoYWxsZW5nZUJveF9jaGFsbGVuZ2VGYWlsZWRCdXR0b25fX3U4YUZTXCIsXG5cdFwiY2hhbGxlbmdlU3VjY2VlZGVkQnV0dG9uXCI6IFwiQ2hhbGxlbmdlQm94X2NoYWxsZW5nZVN1Y2NlZWRlZEJ1dHRvbl9fMThidTJcIixcblx0XCJjaGFsbGVuZ2VJbWFnZU1vdmVtZW50XCI6IFwiQ2hhbGxlbmdlQm94X2NoYWxsZW5nZUltYWdlTW92ZW1lbnRfXzNZM2xmXCIsXG5cdFwiaW1hZ2VcIjogXCJDaGFsbGVuZ2VCb3hfaW1hZ2VfXzJoVDFLXCJcbn07XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/styles/components/ChallengeBox.module.css\n");
 
 /***/ }),
 
-/***/ "cLnE":
+/***/ "./src/styles/components/CompletedChallenger.module.css":
+/*!**************************************************************!*\
+  !*** ./src/styles/components/CompletedChallenger.module.css ***!
+  \**************************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"container": "Home_container__3x6-b",
-	"syfyContainer": "Home_syfyContainer__5uNTA"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"completedChallengesCointainer\": \"CompletedChallenger_completedChallengesCointainer__2_kup\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvQ29tcGxldGVkQ2hhbGxlbmdlci5tb2R1bGUuY3NzP2FmNzAiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvQ29tcGxldGVkQ2hhbGxlbmdlci5tb2R1bGUuY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiY29tcGxldGVkQ2hhbGxlbmdlc0NvaW50YWluZXJcIjogXCJDb21wbGV0ZWRDaGFsbGVuZ2VyX2NvbXBsZXRlZENoYWxsZW5nZXNDb2ludGFpbmVyX18yX2t1cFwiXG59O1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/styles/components/CompletedChallenger.module.css\n");
 
 /***/ }),
 
-/***/ "guWg":
+/***/ "./src/styles/components/Countdown.module.css":
+/*!****************************************************!*\
+  !*** ./src/styles/components/Countdown.module.css ***!
+  \****************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"experienceBar": "ExperienceBar_experienceBar__2JbAX",
-	"currentExperience": "ExperienceBar_currentExperience__2XATR"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"countdownCountainer\": \"Countdown_countdownCountainer__3tSZr\",\n\t\"countdownButton\": \"Countdown_countdownButton__2cSHU\",\n\t\"countdownButtonActive\": \"Countdown_countdownButtonActive__37GOc\",\n\t\"countdownContainerButton\": \"Countdown_countdownContainerButton__AxiEb\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvQ291bnRkb3duLm1vZHVsZS5jc3M/NzJhMCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiIuL3NyYy9zdHlsZXMvY29tcG9uZW50cy9Db3VudGRvd24ubW9kdWxlLmNzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcImNvdW50ZG93bkNvdW50YWluZXJcIjogXCJDb3VudGRvd25fY291bnRkb3duQ291bnRhaW5lcl9fM3RTWnJcIixcblx0XCJjb3VudGRvd25CdXR0b25cIjogXCJDb3VudGRvd25fY291bnRkb3duQnV0dG9uX18yY1NIVVwiLFxuXHRcImNvdW50ZG93bkJ1dHRvbkFjdGl2ZVwiOiBcIkNvdW50ZG93bl9jb3VudGRvd25CdXR0b25BY3RpdmVfXzM3R09jXCIsXG5cdFwiY291bnRkb3duQ29udGFpbmVyQnV0dG9uXCI6IFwiQ291bnRkb3duX2NvdW50ZG93bkNvbnRhaW5lckJ1dHRvbl9fQXhpRWJcIlxufTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/styles/components/Countdown.module.css\n");
 
 /***/ }),
 
-/***/ "lFCE":
+/***/ "./src/styles/components/ExperienceBar.module.css":
+/*!********************************************************!*\
+  !*** ./src/styles/components/ExperienceBar.module.css ***!
+  \********************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"overlay": "LevelUpModal_overlay__1huQl",
-	"container": "LevelUpModal_container__1dM18"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"experienceBar\": \"ExperienceBar_experienceBar__2JbAX\",\n\t\"currentExperience\": \"ExperienceBar_currentExperience__2XATR\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvRXhwZXJpZW5jZUJhci5tb2R1bGUuY3NzP2NiM2MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiIuL3NyYy9zdHlsZXMvY29tcG9uZW50cy9FeHBlcmllbmNlQmFyLm1vZHVsZS5jc3MuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJleHBlcmllbmNlQmFyXCI6IFwiRXhwZXJpZW5jZUJhcl9leHBlcmllbmNlQmFyX18ySmJBWFwiLFxuXHRcImN1cnJlbnRFeHBlcmllbmNlXCI6IFwiRXhwZXJpZW5jZUJhcl9jdXJyZW50RXhwZXJpZW5jZV9fMlhBVFJcIlxufTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/styles/components/ExperienceBar.module.css\n");
 
 /***/ }),
 
-/***/ "p2AZ":
+/***/ "./src/styles/components/LevelUpModal.module.css":
+/*!*******************************************************!*\
+  !*** ./src/styles/components/LevelUpModal.module.css ***!
+  \*******************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"countdownCountainer": "Countdown_countdownCountainer__3tSZr",
-	"countdownButton": "Countdown_countdownButton__2cSHU",
-	"countdownButtonActive": "Countdown_countdownButtonActive__37GOc",
-	"countdownContainerButton": "Countdown_countdownContainerButton__AxiEb"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"overlay\": \"LevelUpModal_overlay__1huQl\",\n\t\"container\": \"LevelUpModal_container__1dM18\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvTGV2ZWxVcE1vZGFsLm1vZHVsZS5jc3M/NzBmOCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwiZmlsZSI6Ii4vc3JjL3N0eWxlcy9jb21wb25lbnRzL0xldmVsVXBNb2RhbC5tb2R1bGUuY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwib3ZlcmxheVwiOiBcIkxldmVsVXBNb2RhbF9vdmVybGF5X18xaHVRbFwiLFxuXHRcImNvbnRhaW5lclwiOiBcIkxldmVsVXBNb2RhbF9jb250YWluZXJfXzFkTTE4XCJcbn07XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/styles/components/LevelUpModal.module.css\n");
 
 /***/ }),
 
-/***/ "uixA":
+/***/ "./src/styles/components/Profile.module.css":
+/*!**************************************************!*\
+  !*** ./src/styles/components/Profile.module.css ***!
+  \**************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"profileContainer": "Profile_profileContainer__3iYlY"
-};
-
+eval("// Exports\nmodule.exports = {\n\t\"profileContainer\": \"Profile_profileContainer__3iYlY\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvUHJvZmlsZS5tb2R1bGUuY3NzP2YxZGMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiLi9zcmMvc3R5bGVzL2NvbXBvbmVudHMvUHJvZmlsZS5tb2R1bGUuY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwicHJvZmlsZUNvbnRhaW5lclwiOiBcIlByb2ZpbGVfcHJvZmlsZUNvbnRhaW5lcl9fM2lZbFlcIlxufTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/styles/components/Profile.module.css\n");
 
 /***/ }),
 
-/***/ "vmXh":
+/***/ "js-cookie":
+/*!****************************!*\
+  !*** external "js-cookie" ***!
+  \****************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("js-cookie");
+eval("module.exports = require(\"js-cookie\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJqcy1jb29raWVcIj8wM2MxIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6ImpzLWNvb2tpZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcImpzLWNvb2tpZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///js-cookie\n");
 
 /***/ }),
 
-/***/ "xnum":
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("next/head");
+eval("module.exports = require(\"next/head\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0L2hlYWRcIj81ZWYyIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6Im5leHQvaGVhZC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcIm5leHQvaGVhZFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next/head\n");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdFwiPzU4OGUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoicmVhY3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJyZWFjdFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react\n");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react/jsx-dev-runtime\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC9qc3gtZGV2LXJ1bnRpbWVcIj9jZDkwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6InJlYWN0L2pzeC1kZXYtcnVudGltZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0L2pzeC1kZXYtcnVudGltZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react/jsx-dev-runtime\n");
 
 /***/ })
 

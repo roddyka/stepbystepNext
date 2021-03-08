@@ -25,7 +25,6 @@ export default function Home(props : homeProps) {
     currentExperience={props.currentExperience} 
     challengesCompleted={props.challengesCompleted}
     >
-      
       <div className={styles.container}>
         <Head><title>Inicio | StepByStep</title></Head>
         <ExperienceBar />
@@ -45,7 +44,7 @@ export default function Home(props : homeProps) {
         </CountdownProvider>
       </div>
     </ChallengesProvider>
-  )
+  ) 
 }
 
 export const getServerSideProps : GetServerSideProps  =  async (ctx) => {
